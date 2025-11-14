@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Notions": {
+    "message": "Concepts",
+    "description": "The label for category Notions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Homelab actuel - Docker Compose & Ansible": {
+    "message": "Current Homelab - Docker Compose & Ansible",
+    "description": "The label for category Homelab actuel in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Futur Homelab - OpenTofu, K3S, Ansible & DevOps": {
+    "message": "Future Homelab - OpenTofu, K3S, Ansible & DevOps",
+    "description": "The label for category Futur Homelab in sidebar tutorialSidebar"
+  }
+}
