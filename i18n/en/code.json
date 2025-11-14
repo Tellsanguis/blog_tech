@@ -1,0 +1,11 @@
+{
+  "theme.NotFound.title": {
+    "message": "Page Not Found"
+  },
+  "theme.NotFound.p1": {
+    "message": "We could not find what you were looking for."
+  },
+  "theme.NotFound.p2": {
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken."
+  }
+}
