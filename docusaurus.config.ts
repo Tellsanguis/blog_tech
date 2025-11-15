@@ -14,8 +14,11 @@ const config: Config = {
   projectName: 'blog_technique',
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'warn',
 
   markdown: {
+    format: 'mdx',
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -45,9 +48,18 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Tellsanguis/blog_technique/tree/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            title: 'TellServ Tech Blog',
+            description: 'Recherches et réflexions sur les défis techniques',
+            copyright: `Copyright © ${new Date().getFullYear()} TellServ.`,
+            language: 'fr',
+          },
           editUrl: 'https://github.com/Tellsanguis/blog_technique/tree/main/',
           blogSidebarTitle: 'Articles récents',
           blogSidebarCount: 'ALL',
@@ -55,12 +67,28 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {name: 'keywords', content: 'homelab, kubernetes, docker, devops, opentofu, ansible, k3s, infrastructure as code'},
+      {name: 'author', content: 'TellServ'},
+    ],
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'TellServ Tech Blog',
       logo: {
@@ -76,6 +104,10 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/Tellsanguis/blog_technique',
           label: 'GitHub',
           position: 'right',
@@ -89,8 +121,8 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Introduction',
-              to: '/docs/intro',
+              label: 'Présentation',
+              to: '/docs/presentation',
             },
           ],
         },
@@ -122,6 +154,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'yaml', 'hcl', 'docker'],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
     },
   } satisfies Preset.ThemeConfig,
 };
