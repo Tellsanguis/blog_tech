@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'TellServ Tech Blog',
   tagline: 'Recherches et réflexions sur les défis techniques',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   url: 'https://docs.tellserv.fr',
   baseUrl: '/',
@@ -93,7 +93,7 @@ const config: Config = {
       title: 'TellServ Tech Blog',
       logo: {
         alt: 'TellServ Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
