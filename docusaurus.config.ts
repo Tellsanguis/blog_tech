@@ -47,7 +47,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/Tellsanguis/blog_technique/tree/main/',
+          editUrl: 'https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -60,7 +60,7 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} TellServ.`,
             language: 'fr',
           },
-          editUrl: 'https://github.com/Tellsanguis/blog_technique/tree/main/',
+          editUrl: 'https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/',
           blogSidebarTitle: 'Articles récents',
           blogSidebarCount: 'ALL',
         },
@@ -108,7 +108,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/Tellsanguis/blog_technique',
+          href: 'https://github.com/Tellsanguis',
           label: 'GitHub',
           position: 'right',
         },
@@ -140,11 +140,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Tellsanguis/blog_technique',
+              href: 'https://github.com/Tellsanguis',
             },
             {
               label: 'Forgejo',
-              href: 'https://forgejo.tellserv.fr',
+              href: 'https://forgejo.tellserv.fr/Tellsanguis',
             },
           ],
         },
