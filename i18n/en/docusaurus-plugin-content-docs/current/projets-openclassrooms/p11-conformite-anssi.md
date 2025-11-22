@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# P11 - ANSSI Compliance for Healthcare IS
+# ANSSI Compliance for Healthcare IS
 
 ## Context
 

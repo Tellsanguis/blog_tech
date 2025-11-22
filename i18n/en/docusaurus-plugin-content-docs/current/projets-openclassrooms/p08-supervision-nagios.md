@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# P8 - Monitoring with Nagios
+# Monitoring with Nagios
 
 ## Context
 

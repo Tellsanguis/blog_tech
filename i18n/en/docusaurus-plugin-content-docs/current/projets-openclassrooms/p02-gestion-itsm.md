@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# P2 - Daily Request Management
+# Daily Request Management
 
 ## Context
 

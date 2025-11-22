@@ -7,5 +7,45 @@
   },
   "theme.NotFound.p2": {
     "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken."
+  },
+  "homepage.title": {
+    "message": "Home",
+    "description": "The homepage title"
+  },
+  "homepage.description": {
+    "message": "Technical blog to document my research and reflections on technical challenges",
+    "description": "The homepage meta description"
+  },
+  "homepage.discoverDocs": {
+    "message": "Discover the documentation",
+    "description": "The homepage button to discover the documentation"
+  },
+  "homepage.readBlog": {
+    "message": "Read the blog",
+    "description": "The homepage button to read the blog"
+  },
+  "homepage.feature1.title": {
+    "message": "Technical Documentation",
+    "description": "Title of feature 1 (technical documentation) on the homepage"
+  },
+  "homepage.feature1.description": {
+    "message": "In-depth documentation of my projects and technical solutions.",
+    "description": "Description of feature 1 (technical documentation) on the homepage"
+  },
+  "homepage.feature2.title": {
+    "message": "Blog Posts",
+    "description": "Title of feature 2 (blog posts) on the homepage"
+  },
+  "homepage.feature2.description": {
+    "message": "Reflections and analysis on technical challenges encountered.",
+    "description": "Description of feature 2 (blog posts) on the homepage"
+  },
+  "homepage.feature3.title": {
+    "message": "Knowledge Sharing",
+    "description": "Title of feature 3 (knowledge sharing) on the homepage"
+  },
+  "homepage.feature3.description": {
+    "message": "Sharing experiences and solutions with the community.",
+    "description": "Description of feature 3 (knowledge sharing) on the homepage"
   }
 }

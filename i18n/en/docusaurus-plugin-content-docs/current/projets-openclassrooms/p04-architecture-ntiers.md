@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# P4 - Docker N-tier Architecture
+# Docker N-tier Architecture
 
 ## Context
 

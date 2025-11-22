@@ -54,7 +54,7 @@ Cette formation, sanctionnée par une **certification RNCP niveau 6** (équivale
 
 J'ai obtenu ma certification par anticipation le **6 novembre 2025**, après moins d'un an de formation.
 
-Le détail de chaque projet est disponible dans la section [Projets OpenClassrooms](/docs/category/projets-openclassrooms).
+Le détail de chaque projet est disponible dans la section [Projets OpenClassrooms](/docs/projets-openclassrooms).
 
 ## Vers l'Infrastructure as Code et le DevOps
 

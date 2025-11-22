@@ -2,7 +2,7 @@
 sidebar_position: 13
 ---
 
-# P13 - Cloud Migration to AWS
+# Cloud Migration to AWS
 
 ## Context
 

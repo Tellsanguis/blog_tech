@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# P5 - Web Services Security
+# Web Services Security
 
 ## Context
 

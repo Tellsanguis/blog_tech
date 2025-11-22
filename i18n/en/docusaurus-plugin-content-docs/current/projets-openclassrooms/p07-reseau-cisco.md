@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# P7 - Cisco Equipment Configuration
+# Cisco Equipment Configuration
 
 ## Context
 

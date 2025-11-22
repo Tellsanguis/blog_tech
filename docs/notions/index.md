@@ -37,4 +37,8 @@ Les notions couvertes incluent :
 - Service mesh
 - Load balancing et scaling
 
-Explorez les sous-sections pour découvrir chaque notion en détail !
+## Articles
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

@@ -38,15 +38,21 @@ La documentation détaille :
 
 ## Avantages de cette approche
 
-Simple à mettre en place et maintenir
-Ansible permet une automatisation complète
-Docker Compose facilite la gestion des services
-Reproductible et versionné avec Git
+- Simple à mettre en place et maintenir
+- Ansible permet une automatisation complète
+- Docker Compose facilite la gestion des services
+- Reproductible et versionné avec Git
 
 ## Limitations
 
-Scalabilité limitée
-Pas de haute disponibilité native
-Orchestration manuelle pour certaines tâches
+- Scalabilité limitée
+- Pas de haute disponibilité native
+- Orchestration manuelle pour certaines tâches
 
 Ces limitations motivent l'évolution vers Kubernetes (voir section "Futur Homelab").
+
+## Articles
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

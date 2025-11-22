@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# P9 - Fleet Management with Ansible
+# Fleet Management with Ansible
 
 ## Context
 

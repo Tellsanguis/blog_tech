@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# P10 - Robust Backup Solution
+# Robust Backup Solution
 
 ## Context
 

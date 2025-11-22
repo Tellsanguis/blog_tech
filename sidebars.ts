@@ -7,13 +7,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Projets OpenClassrooms',
       link: {
-        type: 'generated-index',
-        title: 'Projets OpenClassrooms',
-        description: 'Les 12 projets techniques réalisés dans le cadre de ma formation Administrateur Systèmes, Réseaux et Sécurité.',
-        slug: '/category/projets-openclassrooms',
+        type: 'doc',
+        id: 'projets-openclassrooms/index',
       },
       items: [
-        'projets-openclassrooms/index',
         'projets-openclassrooms/p02-gestion-itsm',
         'projets-openclassrooms/p03-architecture-reseau',
         'projets-openclassrooms/p04-architecture-ntiers',
@@ -32,13 +29,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Notions',
       link: {
-        type: 'generated-index',
-        title: 'Notions',
-        description: 'Concepts et notions techniques fondamentales utilisées dans mes projets.',
-        slug: '/category/notions',
+        type: 'doc',
+        id: 'notions/index',
       },
       items: [
-        'notions/index',
         'notions/exemple',
       ],
     },
@@ -46,13 +40,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Homelab actuel - Docker Compose & Ansible',
       link: {
-        type: 'generated-index',
-        title: 'Homelab actuel - Docker Compose & Ansible',
-        description: 'Documentation de mon infrastructure homelab actuelle, basée sur Docker Compose et Ansible.',
-        slug: '/category/homelab-actuel',
+        type: 'doc',
+        id: 'homelab-actuel/index',
       },
       items: [
-        'homelab-actuel/index',
         'homelab-actuel/exemple',
       ],
     },
@@ -60,13 +51,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Futur Homelab - OpenTofu, K3S, Ansible & DevOps',
       link: {
-        type: 'generated-index',
-        title: 'Futur Homelab - OpenTofu, K3S, Ansible & DevOps',
-        description: 'Documentation de la migration vers une infrastructure moderne basée sur Kubernetes et les pratiques DevOps.',
-        slug: '/category/homelab-futur',
+        type: 'doc',
+        id: 'homelab-futur/index',
       },
       items: [
-        'homelab-futur/index',
         'homelab-futur/exemple',
       ],
     },

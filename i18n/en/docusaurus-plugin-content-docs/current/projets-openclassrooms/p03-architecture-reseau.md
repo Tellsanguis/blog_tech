@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# P3 - Enterprise Network Design
+# Enterprise Network Design
 
 ## Context
 

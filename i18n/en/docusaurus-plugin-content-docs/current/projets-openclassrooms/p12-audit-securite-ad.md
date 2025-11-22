@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# P12 - Active Directory Security Audit
+# Active Directory Security Audit
 
 ## Context
 
