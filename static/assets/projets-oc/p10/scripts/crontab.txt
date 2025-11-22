@@ -1,0 +1,11 @@
+# Sauvegarde differentielle de la VM qui force l'arret apres 3h (donc a 4h du matin)
+0 1 * * * timeout 3h /home/oclassroom/backup_script/backup/differentielle.sh
+
+# Sauvegardes journalieres avec 7 jours de retention
+0 4 * * * /home/oclassroom/backup_script/backup/incrementale.sh "FICHIERS" 7
+0 5 * * * /home/oclassroom/backup_script/backup/incrementale.sh "MAILS" 7
+0 6 * * * /home/oclassroom/backup_script/backup/incrementale.sh "RH" 7
+30 6 * * * /home/oclassroom/backup_script/backup/incrementale.sh "TICKETS" 7
+
+# Sauvegarde de SITE tous les 3 jours à 7h, avec 15 jours de retention
+0 7 */3 * * /home/oclassroom/backup_script/backup/incrementale.sh "SITE" 15

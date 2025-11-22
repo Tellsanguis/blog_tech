@@ -1,0 +1,52 @@
+=====================================================
+[2025-08-12 17:23:56] ➤ DÉBUT DE LA RESTAURATION INCRÉMENTALE
+Dossier restauré : FICHIERS
+Type : Fichier spécifique
+Horodatage de la sauvegarde : 2025-08-25_12-00-00_INC
+=====================================================
+➤ Restauration de 'doc1.txt' vers '/home/oclassroom/mairie/FICHIERS/.'
+receiving incremental file list
+doc1.txt
+
+sent 43 bytes  received 139 bytes  121,33 bytes/sec
+total size is 18  speedup is 0,10
+=====================================================
+[2025-08-12 17:24:13] ➤ DÉBUT DE LA RESTAURATION INCRÉMENTALE
+Dossier restauré : FICHIERS
+Type : Dossier complet
+Horodatage de la sauvegarde : 2025-08-25_12-00-00_INC
+=====================================================
+receiving incremental file list
+./
+doc2.txt
+fichier_2025-08-12_1.txt
+fichier_2025-08-12_2.txt
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+fichier_2025-08-17_1.txt
+fichier_2025-08-17_2.txt
+fichier_2025-08-18_1.txt
+fichier_2025-08-18_2.txt
+fichier_2025-08-19_1.txt
+fichier_2025-08-19_2.txt
+fichier_2025-08-20_1.txt
+fichier_2025-08-20_2.txt
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+fichier_2025-08-22_1.txt
+fichier_2025-08-22_2.txt
+fichier_2025-08-23_1.txt
+fichier_2025-08-23_2.txt
+fichier_2025-08-24_1.txt
+fichier_2025-08-24_2.txt
+fichier_2025-08-25_1.txt
+fichier_2025-08-25_2.txt
+
+sent 578 bytes  received 2.750 bytes  6.656,00 bytes/sec
+total size is 862  speedup is 0,26

@@ -1,0 +1,348 @@
+=====================================================
+[2025-08-12 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-12_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-12 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-12 12:00:00] ➤ Aucune FULL récente trouvée → SAUVEGARDE DE TYPE : FULL
+sending incremental file list
+./
+doc1.txt
+doc2.txt
+fichier_2025-08-12_1.txt
+fichier_2025-08-12_2.txt
+
+sent 449 bytes  received 95 bytes  1.088,00 bytes/sec
+total size is 94  speedup is 0,17
+[2025-08-12 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-12 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-13 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-13_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-13 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-13 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+
+sent 361 bytes  received 57 bytes  836,00 bytes/sec
+total size is 154  speedup is 0,37
+[2025-08-13 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-13 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-14 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-14_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-14 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-14 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+
+sent 541 bytes  received 95 bytes  1.272,00 bytes/sec
+total size is 212  speedup is 0,33
+[2025-08-14 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-14 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-15 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-15_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-15 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-15 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+
+sent 720 bytes  received 133 bytes  1.706,00 bytes/sec
+total size is 271  speedup is 0,32
+[2025-08-15 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-15 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-16 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-16_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-16 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-16 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+
+sent 903 bytes  received 171 bytes  2.148,00 bytes/sec
+total size is 331  speedup is 0,31
+[2025-08-16 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-16 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-17 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-17_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-17 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-17 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+fichier_2025-08-17_1.txt
+fichier_2025-08-17_2.txt
+
+sent 1.079 bytes  received 209 bytes  2.576,00 bytes/sec
+total size is 390  speedup is 0,30
+[2025-08-17 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-17 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-18 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-18_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-18 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-18 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+fichier_2025-08-17_1.txt
+fichier_2025-08-17_2.txt
+fichier_2025-08-18_1.txt
+fichier_2025-08-18_2.txt
+
+sent 1.284 bytes  received 247 bytes  3.062,00 bytes/sec
+total size is 450  speedup is 0,29
+[2025-08-18 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-18 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-19 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-19_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-19 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-19 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-12_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+fichier_2025-08-17_1.txt
+fichier_2025-08-17_2.txt
+fichier_2025-08-18_1.txt
+fichier_2025-08-18_2.txt
+fichier_2025-08-19_1.txt
+fichier_2025-08-19_2.txt
+
+sent 1.461 bytes  received 285 bytes  3.492,00 bytes/sec
+total size is 510  speedup is 0,29
+[2025-08-19 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-19 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-20 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-20_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-20 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-20 12:00:00] ➤ Aucune FULL récente trouvée → SAUVEGARDE DE TYPE : FULL
+sending incremental file list
+./
+doc1.txt
+doc2.txt
+fichier_2025-08-12_1.txt
+fichier_2025-08-12_2.txt
+fichier_2025-08-13_1.txt
+fichier_2025-08-13_2.txt
+fichier_2025-08-14_1.txt
+fichier_2025-08-14_2.txt
+fichier_2025-08-15_1.txt
+fichier_2025-08-15_2.txt
+fichier_2025-08-16_1.txt
+fichier_2025-08-16_2.txt
+fichier_2025-08-17_1.txt
+fichier_2025-08-17_2.txt
+fichier_2025-08-18_1.txt
+fichier_2025-08-18_2.txt
+fichier_2025-08-19_1.txt
+fichier_2025-08-19_2.txt
+fichier_2025-08-20_1.txt
+fichier_2025-08-20_2.txt
+
+sent 1.913 bytes  received 399 bytes  4.624,00 bytes/sec
+total size is 570  speedup is 0,25
+[2025-08-20 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-20 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-21 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-21_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-21 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-21 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-20_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+
+sent 665 bytes  received 57 bytes  1.444,00 bytes/sec
+total size is 630  speedup is 0,87
+[2025-08-21 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-21 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-22 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-22_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-22 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-22 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-20_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+fichier_2025-08-22_1.txt
+fichier_2025-08-22_2.txt
+
+sent 845 bytes  received 95 bytes  1.880,00 bytes/sec
+total size is 689  speedup is 0,73
+[2025-08-22 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-22 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-23 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-23_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-23 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-23 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-20_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+fichier_2025-08-22_1.txt
+fichier_2025-08-22_2.txt
+fichier_2025-08-23_1.txt
+fichier_2025-08-23_2.txt
+
+sent 1.023 bytes  received 133 bytes  2.312,00 bytes/sec
+total size is 745  speedup is 0,64
+[2025-08-23 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-23 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-24 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-24_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-24 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-24 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-20_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+fichier_2025-08-22_1.txt
+fichier_2025-08-22_2.txt
+fichier_2025-08-23_1.txt
+fichier_2025-08-23_2.txt
+fichier_2025-08-24_1.txt
+fichier_2025-08-24_2.txt
+
+sent 1.203 bytes  received 171 bytes  2.748,00 bytes/sec
+total size is 803  speedup is 0,58
+[2025-08-24 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-24 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+
+=====================================================
+[2025-08-25 12:00:00] ➤ DÉBUT DE LA SAUVEGARDE INCRÉMENTALE
+Dossiers sauvegardés : FICHIERS
+Rétention prévue : 7 jour(s)
+Horodatage de départ : 2025-08-25_12-00-00
+=====================================================
+-----------------------------------------------------
+[2025-08-25 12:00:00] ➤ Traitement du dossier : FICHIERS
+[2025-08-25 12:00:00] ➤ Sauvegarde de TYPE : INCRÉMENTALE (base : /home/backup-user/backup/FICHIERS/2025-08-20_12-00-00_FULL)
+sending incremental file list
+./
+fichier_2025-08-21_1.txt
+fichier_2025-08-21_2.txt
+fichier_2025-08-22_1.txt
+fichier_2025-08-22_2.txt
+fichier_2025-08-23_1.txt
+fichier_2025-08-23_2.txt
+fichier_2025-08-24_1.txt
+fichier_2025-08-24_2.txt
+fichier_2025-08-25_1.txt
+fichier_2025-08-25_2.txt
+
+sent 1.384 bytes  received 209 bytes  3.186,00 bytes/sec
+total size is 862  speedup is 0,54
+[2025-08-25 12:00:01] ➤ Fin de la sauvegarde de FICHIERS
+[2025-08-25 12:00:01] SAUVEGARDE JOURNALIÈRE TERMINÉE
+

@@ -1,0 +1,33 @@
+[DEFAULT]
+backend = auto
+banaction = iptables-multiport
+protocol = tcp
+chain = INPUT
+action = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+
+[apache-custom]
+enabled  = true
+port     = http,https,5501,5502
+filter   = apache-custom
+logpath  = /var/log/apache2/*_access.log
+maxretry = 3
+findtime = 300
+bantime  = 300
+
+[nginx-custom]
+enabled  = true
+port     = http,https,5501,5502
+filter   = nginx-custom
+logpath  = /var/log/nginx/access.log
+maxretry = 3
+findtime = 300
+bantime  = 300
+
+[vsftpd-custom]
+enabled  = true
+port     = ftp,ftp-data,ftps,ftps-data
+filter   = vsftpd-custom
+logpath  = /var/log/vsftpd.log
+maxretry = 3
+findtime = 300
+bantime  = 300

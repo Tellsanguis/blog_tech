@@ -1,0 +1,15 @@
+=====================================================
+[2025-08-12 17:29:42] ➤ DÉBUT DE LA RESTAURATION DIFFÉRENTIELLE
+Dossier restauré : MACHINES
+Destination locale : /home/oclassroom/mairie/MACHINES
+Source distante : backup-user@stockage:/home/backup-user/backup/MACHINES
+=====================================================
+receiving incremental file list
+./
+fichier_1Go.bin
+fichier_gros.test
+
+sent 65 bytes  received 6.444.024.019 bytes  186.783.306,78 bytes/sec
+total size is 6.442.450.944  speedup is 1,00
+[2025-08-12 17:30:16] ➤ FIN DE LA RESTAURATION
+

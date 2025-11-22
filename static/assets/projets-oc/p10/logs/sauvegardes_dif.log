@@ -1,0 +1,72 @@
+=====================================================
+[2025-08-12 17:26:10] ➤ DÉBUT DE LA SAUVEGARDE DIFFÉRENTIELLE
+Dossier      : MACHINES
+Source       : /home/oclassroom/mairie/MACHINES
+Destination  : backup-user@stockage:/home/backup-user/backup/MACHINES
+Horodatage   : 2025-08-12_17-26-10
+=====================================================
+[2025-08-12 17:26:10] ➤ Vérification du dossier distant...
+[2025-08-12 17:26:10] ➤ Dossier distant prêt.
+[2025-08-12 17:26:10] ➤ Lancement de rsync...
+sending incremental file list
+./
+fichier_gros.test
+rsync error: unexplained error (code 255) at rsync.c(716) [sender=3.2.7]
+[2025-08-12 17:26:35] ➤ Durée de la sauvegarde : 25 secondes
+=====================================================
+[2025-08-12 17:26:42] ➤ DÉBUT DE LA SAUVEGARDE DIFFÉRENTIELLE
+Dossier      : MACHINES
+Source       : /home/oclassroom/mairie/MACHINES
+Destination  : backup-user@stockage:/home/backup-user/backup/MACHINES
+Horodatage   : 2025-08-12_17-26-42
+=====================================================
+[2025-08-12 17:26:42] ➤ Vérification du dossier distant...
+[2025-08-12 17:26:42] ➤ Dossier distant prêt.
+[2025-08-12 17:26:42] ➤ Lancement de rsync...
+sending incremental file list
+./
+fichier_gros.test
+
+sent 668.597.769 bytes  received 38 bytes  148.577.290,44 bytes/sec
+total size is 5.368.709.120  speedup is 8,03
+[2025-08-12 17:26:46] SAUVEGARDE DIFFÉRENTIELLE TERMINÉE
+
+[2025-08-12 17:26:46] ➤ Durée de la sauvegarde : 4 secondes
+=====================================================
+[2025-08-12 17:27:13] ➤ DÉBUT DE LA SAUVEGARDE DIFFÉRENTIELLE
+Dossier      : MACHINES
+Source       : /home/oclassroom/mairie/MACHINES
+Destination  : backup-user@stockage:/home/backup-user/backup/MACHINES
+Horodatage   : 2025-08-12_17-27-13
+=====================================================
+[2025-08-12 17:27:13] ➤ Vérification du dossier distant...
+[2025-08-12 17:27:13] ➤ Dossier distant prêt.
+[2025-08-12 17:27:13] ➤ Lancement de rsync...
+sending incremental file list
+./
+fichier_gros.test
+
+sent 5.370.019.985 bytes  received 38 bytes  188.421.755,19 bytes/sec
+total size is 5.368.709.120  speedup is 1,00
+[2025-08-12 17:27:41] SAUVEGARDE DIFFÉRENTIELLE TERMINÉE
+
+[2025-08-12 17:27:41] ➤ Durée de la sauvegarde : 28 secondes
+=====================================================
+[2025-08-12 17:28:56] ➤ DÉBUT DE LA SAUVEGARDE DIFFÉRENTIELLE
+Dossier      : MACHINES
+Source       : /home/oclassroom/mairie/MACHINES
+Destination  : backup-user@stockage:/home/backup-user/backup/MACHINES
+Horodatage   : 2025-08-12_17-28-56
+=====================================================
+[2025-08-12 17:28:56] ➤ Vérification du dossier distant...
+[2025-08-12 17:28:56] ➤ Dossier distant prêt.
+[2025-08-12 17:28:56] ➤ Lancement de rsync...
+sending incremental file list
+./
+fichier_1Go.bin
+
+sent 1.074.004.134 bytes  received 38 bytes  165.231.411,08 bytes/sec
+total size is 6.442.450.944  speedup is 6,00
+[2025-08-12 17:29:02] SAUVEGARDE DIFFÉRENTIELLE TERMINÉE
+
+[2025-08-12 17:29:02] ➤ Durée de la sauvegarde : 6 secondes
