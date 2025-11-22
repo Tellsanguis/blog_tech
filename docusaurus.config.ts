@@ -3,6 +3,24 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['fr', 'en'],
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        searchBarShortcutHint: false,
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   title: 'TellServ Tech Blog',
   tagline: 'Recherches et réflexions sur les défis techniques',
   favicon: 'img/favicon.png',
@@ -109,13 +127,15 @@ const config: Config = {
         },
         {
           href: 'https://github.com/Tellsanguis',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub profile',
         },
         {
           href: 'https://forgejo.tellserv.fr/Tellsanguis',
-          label: 'Forgejo',
           position: 'right',
+          className: 'header-forgejo-link',
+          'aria-label': 'Forgejo profile',
         },
       ],
     },
