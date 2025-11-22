@@ -112,6 +112,11 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://forgejo.tellserv.fr/Tellsanguis',
+          label: 'Forgejo',
+          position: 'right',
+        },
       ],
     },
     footer: {
