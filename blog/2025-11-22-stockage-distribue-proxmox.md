@@ -58,7 +58,7 @@ Ceph est la solution de stockage distribué la plus mise en avant par Proxmox. E
 
 **Inconvénients :**
 - **Consommation importante de ressources** : CPU et RAM significatifs pour les processus MON, MGR et OSD
-- **Recommandation officielle de 5 nœuds minimum** pour une configuration optimale (3 MON + répartition des OSD)
+- **3 nœuds minimum, mais [5 recommandés](https://ceph.io/en/news/blog/2019/part-3-rhcs-bluestore-performance-scalability-3-vs-5-nodes/)** pour des performances optimales (scalabilité quasi-linéaire grâce à l'architecture scale-out de Ceph)
 - **Nécessite un réseau 10 Gbps** pour des performances acceptables
 - Complexité opérationnelle élevée malgré la simplification apportée par Proxmox
 
@@ -107,7 +107,7 @@ Au regard des contraintes de mon homelab, Linstor DRBD m'a semblé être le choi
 
 | Critère | Ceph | ZFS Réplication | Linstor DRBD |
 |---------|------|-----------------|--------------|
-| Nombre de nœuds minimum | 5 (optimal) | 2 | 3 (2 + témoin) |
+| Nombre de nœuds minimum | 3 ([5 optimal](https://ceph.io/en/news/blog/2019/part-3-rhcs-bluestore-performance-scalability-3-vs-5-nodes/)) | 2 | 3 (2 + témoin) |
 | Réseau recommandé | 10 Gbps | 1 Gbps | 1 Gbps (optimal 10 Gbps) |
 | Type de réplication | Synchrone | Asynchrone | Synchrone |
 | Live migration | Oui | Non | Oui |
