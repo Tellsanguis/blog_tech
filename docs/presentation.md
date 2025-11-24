@@ -9,10 +9,11 @@ Administrateur systèmes et réseaux spécialisé en **automatisation cross-plat
 Tout a commencé comme un simple hobby avec les premières créations de **serveurs Minecraft** en 2013 : lanceur de jeu customisé, gestion de fichiers de configurations, premiers scripts en Bash puis en Python vers 2015.
 
 En 2017, j'ai créé mon premier homelab avec un **Raspberry Pi** qui me servait pour divers projets :
-- Serveur audio Bluetooth
-- AirPlay
-- UPnP
+- Serveur audio Bluetooth, AirPlay, UPnP
 - Console de jeux vidéo rétro
+- Relais WOL (pour réveiller mon PC hors de mon réseau local)
+- Serveur VPN
+- Serveur DNS / PiHole
 
 ## La découverte du self-hosting
 

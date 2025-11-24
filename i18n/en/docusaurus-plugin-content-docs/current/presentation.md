@@ -9,10 +9,11 @@ Systems and network administrator specializing in **cross-platform automation** 
 It all started as a simple hobby with my first **Minecraft servers** back in 2013: custom game launchers, configuration file management, and my first Bash scripts, followed by Python around 2015.
 
 In 2017, I built my first homelab with a **Raspberry Pi** that I used for various projects:
-- Bluetooth audio server
-- AirPlay
-- UPnP
+- Bluetooth audio server, AirPlay, UPnP
 - Retro gaming console
+- WOL relay (to wake my PC outside my local network)
+- VPN server
+- DNS server / PiHole
 
 ## Discovering Self-Hosting
 
