@@ -12,6 +12,10 @@
     "message": "Home",
     "description": "The homepage title"
   },
+  "homepage.tagline": {
+    "message": "Research and reflections on technical challenges",
+    "description": "The homepage tagline"
+  },
   "homepage.description": {
     "message": "Technical blog to document my research and reflections on technical challenges",
     "description": "The homepage meta description"

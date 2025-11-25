@@ -15,17 +15,31 @@ My current homelab uses a simple and effective approach:
 
 ## Architecture
 
+### Infrastructure Diagram
+
+The diagram illustrates the complete architecture of my current homelab, including:
+- Network infrastructure with the main server
+- Deployed Docker services
+- Traefik configuration for the reverse proxy (public and private instances)
+- Connections between different components
+- Local DNS configuration with dnsmasq
+
+![Current homelab architecture diagram](/img/diagrams/homelab-actuel-infra.png)
+
 ### Physical/Virtual Infrastructure
-- Dedicated servers or VMs
-- Secure local network
-- Storage and backups
+- Ubuntu Server dedicated server
+- Secure local network with local DNS (dnsmasq)
+- Unified storage with MergerFS
+- Firewall with firewalld
 
 ### Tech Stack
-- **OS**: Linux (Debian/Ubuntu)
+- **OS**: Linux (Ubuntu Server)
 - **Containerization**: Docker & Docker Compose
 - **Automation**: Ansible playbooks
-- **Reverse proxy**: Traefik or Nginx
-- **Monitoring**: Prometheus, Grafana
+- **Reverse proxy**: Traefik v3 (public and private instances)
+- **Security**: CrowdSec, TLS with Let's Encrypt
+- **Monitoring**: Beszel, Uptime Kuma
+- **Local DNS**: dnsmasq for resolving *.local.tellserv.fr
 
 ## Deployed Services
 
@@ -41,18 +55,39 @@ The documentation details:
 - Simple to set up and maintain
 - Ansible enables complete automation
 - Docker Compose facilitates service management
-- Reproducible and versioned with Git
+- Ideal for progressive automation learning
 
 ## Limitations
 
-- Limited scalability
-- No native high availability
-- Manual orchestration for certain tasks
+This infrastructure has several important limitations that motivate the evolution toward a new approach (see "Future Homelab" section).
 
-These limitations motivate the evolution towards Kubernetes (see "Future Homelab" section).
+### Initial Absence of Git Versioning
 
-## Articles
+One of the main limitations of this initial approach was the **absence of infrastructure versioning with Git**. At this stage of my journey, I had not yet mastered the DevOps philosophy and infrastructure code management best practices.
 
-import DocCardList from '@theme/DocCardList';
+**Consequences of this limitation:**
+- No history of configuration changes
+- Difficult to roll back in case of problems
+- No traceability of modifications
+- Complex collaboration
+- Absence of code review process
+- Risk of divergence between documentation and reality
 
-<DocCardList />
+This gap was an **important lesson** that led me to:
+1. Progressively correct this infrastructure by versioning Ansible playbooks and Docker Compose files
+2. Adopt Git and DevOps practices for all my future projects
+3. Integrate the "Infrastructure as Code" philosophy from the design phase
+
+**Important note**: The Git repository [Infra_ansible_dockercompose](https://forgejo.tellserv.fr/Tellsanguis/Infra_ansible_dockercompose) was created **after the fact** to present the work done. In the initial practice, Git, automated tests, and CI/CD were not used due to lack of knowledge at the time.
+
+Git versioning is now in place for this infrastructure, but the architecture itself remains limited (see below).
+
+### Technical Architecture Limitations
+
+- **Limited scalability**: Single-machine infrastructure without load distribution capability
+- **No high availability**: Single point of failure (SPOF)
+- **Manual orchestration**: Some tasks still require manual intervention
+- **Initially absent CI/CD**: Manual deployments via Ansible (no automation on Git push)
+- **Limited testing**: No automatic validation of changes before deployment
+
+These limitations motivate the evolution toward Kubernetes (K3S) and a complete Infrastructure as Code approach with CI/CD (see [Future Homelab](../homelab-futur/index.md) section).

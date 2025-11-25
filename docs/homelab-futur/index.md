@@ -70,9 +70,3 @@ Cette migration représente :
 - **Apprentissage pratique** : Expérimentation en conditions réelles
 - **Évolution technique** : Passage à des solutions modernes et scalables
 - **Portfolio** : Démonstration de compétences DevOps avancées
-
-## Articles
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />

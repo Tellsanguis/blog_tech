@@ -27,24 +27,15 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Notions',
-      link: {
-        type: 'doc',
-        id: 'notions/index',
-      },
-      items: [
-        'notions/exemple',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Homelab actuel - Docker Compose & Ansible',
       link: {
         type: 'doc',
         id: 'homelab-actuel/index',
       },
       items: [
-        'homelab-actuel/exemple',
+        'homelab-actuel/playbooks-ansible',
+        'homelab-actuel/docker-compose',
+        'homelab-actuel/traefik',
       ],
     },
     {
@@ -55,7 +46,8 @@ const sidebars: SidebarsConfig = {
         id: 'homelab-futur/index',
       },
       items: [
-        'homelab-futur/exemple',
+        'homelab-futur/premiere-version-ha-monomachine',
+        'homelab-futur/cluster-3-noeuds-proxmox',
       ],
     },
   ],

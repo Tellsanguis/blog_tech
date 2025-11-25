@@ -70,9 +70,3 @@ This migration represents:
 - **Practical learning**: Experimentation in real conditions
 - **Technical evolution**: Moving to modern and scalable solutions
 - **Portfolio**: Demonstration of advanced DevOps skills
-
-## Articles
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
