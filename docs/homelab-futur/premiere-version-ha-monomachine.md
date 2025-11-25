@@ -53,12 +53,7 @@ L'objectif était de valider les concepts suivants avant d'investir dans du mat�
 
 Le schéma illustre l'architecture réseau de cette première version :
 
-<details>
-<summary>Schéma réseau du homelab futur (PDF - cliquez pour afficher)</summary>
-
-<iframe src="/img/diagrams/homelab-futur-network.pdf" width="100%" height="600px" style={{border: 'none'}}></iframe>
-
-</details>
+![Schéma réseau du homelab futur](/img/diagrams/homelab-futur-network.png)
 
 ### Composants de l'architecture
 

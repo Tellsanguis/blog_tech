@@ -26,12 +26,7 @@ This single-machine infrastructure allows acquiring hands-on experience with:
 
 ## Network Architecture
 
-<details>
-<summary>Future homelab network diagram (PDF - click to display)</summary>
-
-<iframe src="/img/diagrams/homelab-futur-network.pdf" width="100%" height="600px" style={{border: 'none'}}></iframe>
-
-</details>
+![Future homelab network diagram](/img/diagrams/homelab-futur-network.png)
 
 ## What Can Be Learned
 

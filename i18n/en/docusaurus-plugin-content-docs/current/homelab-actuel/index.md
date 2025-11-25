@@ -24,12 +24,7 @@ The diagram illustrates the complete architecture of my current homelab, includi
 - Connections between different components
 - Local DNS configuration with dnsmasq
 
-<details>
-<summary>Current homelab architecture diagram (PDF - click to display)</summary>
-
-<iframe src="/img/diagrams/homelab-actuel-infra.pdf" width="100%" height="600px" style={{border: 'none'}}></iframe>
-
-</details>
+![Current homelab architecture diagram](/img/diagrams/homelab-actuel-infra.png)
 
 ### Physical/Virtual Infrastructure
 - Ubuntu Server dedicated server
