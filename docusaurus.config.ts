@@ -21,6 +21,10 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+  ],
+
   title: 'TellServ Tech Blog',
   tagline: 'Recherches et réflexions sur les défis techniques',
   favicon: 'img/favicon.png',
@@ -184,6 +188,16 @@ const config: Config = {
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
+      },
+      config: {
+        // options from medium-zoom: https://github.com/francoischalifour/medium-zoom#options
+      }
     },
   } satisfies Preset.ThemeConfig,
 };

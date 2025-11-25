@@ -26,6 +26,8 @@ Le diagramme illustre l'architecture complète de mon homelab actuel, incluant :
 
 ![Schéma d'architecture du homelab actuel](/img/diagrams/homelab-actuel-infra.png)
 
+[📥 Télécharger le PDF](/img/diagrams/homelab-actuel-infra.pdf)
+
 ### Infrastructure physique/virtuelle
 - Serveur dédié Ubuntu Server
 - Réseau local sécurisé avec DNS local (dnsmasq)

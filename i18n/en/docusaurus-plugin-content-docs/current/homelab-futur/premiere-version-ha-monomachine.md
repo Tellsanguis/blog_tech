@@ -28,6 +28,8 @@ This single-machine infrastructure allows acquiring hands-on experience with:
 
 ![Future homelab network diagram](/img/diagrams/homelab-futur-network.png)
 
+[📥 Download PDF](/img/diagrams/homelab-futur-network.pdf)
+
 ## What Can Be Learned
 
 This single-machine infrastructure allows acquiring essential skills:

@@ -55,6 +55,8 @@ Le schéma illustre l'architecture réseau de cette première version :
 
 ![Schéma réseau du homelab futur](/img/diagrams/homelab-futur-network.png)
 
+[📥 Télécharger le PDF](/img/diagrams/homelab-futur-network.pdf)
+
 ### Composants de l'architecture
 
 **Infrastructure physique/virtuelle** :
