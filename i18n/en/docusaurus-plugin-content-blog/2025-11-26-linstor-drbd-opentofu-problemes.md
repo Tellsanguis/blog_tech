@@ -282,6 +282,30 @@ I'll document my final decision and its implementation in a future article.
 
 ---
 
+:::info Update: Final Solution Adopted
+
+After testing Option 1 with a [Python script for LINSTOR resource management](https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/manage_linstor_resources.py), I found that this approach, while functional, added too much complexity and synchronization risks for production use.
+
+**The final decision**: Partition the NVMe drives on each Proxmox node according to the following strategy:
+
+- **300 GB allocated to LINSTOR DRBD** (`linstor_storage`) for:
+  - VMs and LXC containers requiring high availability at the Proxmox level
+  - The LXC container hosting the NFS server (see [zfs-sync-nfs-ha project](https://forgejo.tellserv.fr/Tellsanguis/zfs-sync-nfs-ha))
+  - Any distributed storage managed by Proxmox HA
+
+- **200 GB allocated to local-lvm** (`local-lvm`) for:
+  - K3S cluster VMs that **don't need** HA at the Proxmox level
+  - High availability ensured by the Kubernetes cluster itself
+  - Simple and fast provisioning via OpenTofu
+
+This architecture allows using the right tool for the right purpose: LINSTOR DRBD for what truly requires synchronous replication at the infrastructure level, and performant local storage for workloads where HA is managed by the application layer (Kubernetes).
+
+A detailed article on this implementation and the HA NFS container will follow soon.
+
+:::
+
+---
+
 **References**:
 - [Choosing a Distributed Storage Technology for a Proxmox HA Cluster](/blog/stockage-distribue-proxmox-ha)
 - [LINSTOR User Guide](https://linbit.com/drbd-user-guide/)

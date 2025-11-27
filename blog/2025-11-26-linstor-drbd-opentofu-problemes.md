@@ -282,6 +282,30 @@ Je documenterai ma décision finale et sa mise en œuvre dans un prochain articl
 
 ---
 
+:::info Mise à jour : Solution finale retenue
+
+Après avoir testé l'Option 1 avec un [script Python de gestion des ressources LINSTOR](https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/manage_linstor_resources.py), j'ai constaté que cette approche, bien que fonctionnelle, ajoutait une complexité trop importante et des risques de désynchronisation pour une utilisation en production.
+
+**La décision finale** : Partitionner les disques NVMe de chaque nœud Proxmox selon la stratégie suivante :
+
+- **300 Go alloués à LINSTOR DRBD** (`linstor_storage`) pour :
+  - Les VMs et LXC nécessitant la haute disponibilité au niveau Proxmox
+  - Le conteneur LXC hébergeant le serveur NFS (voir [projet zfs-sync-nfs-ha](https://forgejo.tellserv.fr/Tellsanguis/zfs-sync-nfs-ha))
+  - Tout stockage distribué géré par Proxmox HA
+
+- **200 Go alloués à local-lvm** (`local-lvm`) pour :
+  - Les VMs du cluster K3S qui n'ont **pas besoin** de HA au niveau Proxmox
+  - La haute disponibilité étant assurée par le cluster Kubernetes lui-même
+  - Provisionnement simple et rapide via OpenTofu
+
+Cette architecture permet d'utiliser le bon outil au bon endroit : LINSTOR DRBD pour ce qui nécessite vraiment de la réplication synchrone au niveau infrastructure, et du stockage local performant pour les workloads où la HA est gérée par la couche applicative (Kubernetes).
+
+Un article détaillé sur cette mise en œuvre et le conteneur NFS HA suivra prochainement.
+
+:::
+
+---
+
 **Références** :
 - [Choisir sa technologie de stockage distribué pour un cluster Proxmox HA](/blog/stockage-distribue-proxmox-ha)
 - [LINSTOR User Guide](https://linbit.com/drbd-user-guide/)
