@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # Auteur: BENE Maël
 # Version: 1.0
 # Date de création: 27-11-2025

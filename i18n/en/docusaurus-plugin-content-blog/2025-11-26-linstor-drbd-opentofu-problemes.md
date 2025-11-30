@@ -284,7 +284,7 @@ I'll document my final decision and its implementation in a future article.
 
 :::info Update: Final Solution Adopted
 
-After testing Option 1 with a [Python script for LINSTOR resource management](https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/manage_linstor_resources.py), I found that this approach, while functional, added too much complexity and synchronization risks for production use.
+After testing Option 1 with a [Python script for LINSTOR resource management](/scripts/blog/2025-11-26-linstor-drbd-opentofu/manage_linstor_resources.py), I found that this approach, while functional, added too much complexity and synchronization risks for production use.
 
 **The final decision**: Partition the NVMe drives on each Proxmox node according to the following strategy:
 

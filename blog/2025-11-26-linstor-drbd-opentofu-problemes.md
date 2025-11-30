@@ -284,7 +284,7 @@ Je documenterai ma décision finale et sa mise en œuvre dans un prochain articl
 
 :::info Mise à jour : Solution finale retenue
 
-Après avoir testé l'Option 1 avec un [script Python de gestion des ressources LINSTOR](https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/manage_linstor_resources.py), j'ai constaté que cette approche, bien que fonctionnelle, ajoutait une complexité trop importante et des risques de désynchronisation pour une utilisation en production.
+Après avoir testé l'Option 1 avec un [script Python de gestion des ressources LINSTOR](/scripts/blog/2025-11-26-linstor-drbd-opentofu/manage_linstor_resources.py), j'ai constaté que cette approche, bien que fonctionnelle, ajoutait une complexité trop importante et des risques de désynchronisation pour une utilisation en production.
 
 **La décision finale** : Partitionner les disques NVMe de chaque nœud Proxmox selon la stratégie suivante :
 

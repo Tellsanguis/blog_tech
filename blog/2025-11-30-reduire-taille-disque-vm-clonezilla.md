@@ -9,7 +9,9 @@ image: /img/blog/2025-11-30-reduire-disque-vm/clonezilla-logo.svg
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-![Clonezilla Logo](/img/blog/2025-11-30-reduire-disque-vm/clonezilla-logo.svg)
+<p align="center">
+  <img src="/img/blog/2025-11-30-reduire-disque-vm/clonezilla-logo.svg" alt="Clonezilla Logo" width="300" />
+</p>
 
 Comment migrer une VM vers un disque plus petit en préservant toutes les données avec Clonezilla, afin d'optimiser l'utilisation du stockage Linstor DRBD dans un cluster Proxmox.
 
