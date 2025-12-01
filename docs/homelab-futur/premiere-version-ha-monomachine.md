@@ -6,7 +6,9 @@ sidebar_position: 2
 
 ## Introduction
 
-**Note importante** : Cette page décrit le **projet initial** que j'avais envisagé pour expérimenter avec Kubernetes. Ce projet a **évolué** vers une décision finale différente : un cluster Proxmox 3 nœuds (voir [Cluster 3 noeuds Proxmox](./cluster-3-noeuds-proxmox.md)).
+:::note[Projet initial non réalisé]
+Cette page décrit le **projet initial** que j'avais envisagé pour expérimenter avec Kubernetes. Ce projet a **évolué** vers une décision finale différente : un cluster Proxmox 3 nœuds (voir [Cluster 3 noeuds Proxmox](./cluster-3-noeuds-proxmox.md)).
+:::
 
 L'idée initiale était de créer une **étape transitoire** vers une infrastructure distribuée complète, en expérimentant avec Kubernetes (K3S), l'Infrastructure as Code (OpenTofu/Terraform), Git et les pipelines CI/CD, tout en restant sur une seule machine physique.
 
@@ -47,7 +49,7 @@ L'objectif était de valider les concepts suivants avant d'investir dans du mat�
 - Affiner les processus de déploiement
 - Identifier les services compatibles avec K8S
 
-**Évolution du projet** : Après réflexion, j'ai décidé d'utiliser des **VMs multiples** pour simuler un vrai cluster et apprendre les aspects distribués dès le début. Cette approche m'a permis d'expérimenter avec la répartition de charge, la tolérance aux pannes et les politiques d'affinité, ce qui n'aurait pas été possible sur un nœud unique.
+**Évolution du projet** : Bien que le serveur devait rester une machine physique unique, l'idée était d'utiliser plusieurs VMs pour simuler un vrai cluster et apprendre les aspects distribués dès le début. Cette approche aurait permis d'expérimenter avec la répartition de charge, la tolérance aux pannes et les politiques d'affinité.
 
 ## Architecture réseau
 
@@ -220,9 +222,9 @@ Cette version sert de **fondation** pour le cluster complet :
 - Pipelines CI/CD opérationnels
 - Documentation complète des processus
 
-## Évolution vers un vrai cluster
+## Évolution vers un vrai cluster (plan initial)
 
-Une fois cette version stabilisée, l'évolution vers un cluster multi-nœuds devient naturelle :
+Si cette version avait été réalisée et stabilisée, l'évolution vers un cluster multi-nœuds aurait été naturelle :
 
 ### Matériel supplémentaire nécessaire
 
@@ -238,10 +240,10 @@ Une fois cette version stabilisée, l'évolution vers un cluster multi-nœuds de
 
 ### Migration progressive
 
-**Stratégie de migration** :
-1. Ajouter un deuxième nœud au cluster existant
+**Stratégie de migration prévue** :
+1. Ajouter un deuxième nœud pour former un cluster
 2. Tester la répartition des pods entre nœuds
-3. Ajouter un troisième nœud pour activer HA
+3. Ajouter un troisième nœud pour le quorum et activer HA (ou utiliser un Qdevice)
 4. Déployer Ceph ou Linstor pour le stockage distribué
 5. Migrer les workloads critiques avec réplication
 6. Configurer les Network Policies avancées
@@ -273,9 +275,9 @@ Ce projet initial de homelab "HA" monomachine a été une **réflexion important
 Après avoir analysé les limitations, notamment l'impossibilité de tester les aspects distribués (haute disponibilité, stockage Ceph, répartition de charge), j'ai décidé d'opter directement pour un **cluster Proxmox 3 nœuds**.
 
 Cette décision permet :
-- D'expérimenter avec de vraies VMs multiples simulant un cluster distribué
+- D'expérimenter avec de vraies VMs K3S réparties sur les nœuds physiques de production
 - De tester la haute disponibilité et le stockage distribué (Ceph)
 - D'apprendre les aspects réseau complexes d'un cluster réel
-- De construire une base solide pour une infrastructure production-ready
+- De construire une base solide pour une infrastructure prête pour la production
 
 Pour plus de détails sur l'architecture finale retenue, voir la page [Cluster 3 noeuds Proxmox](./cluster-3-noeuds-proxmox.md).

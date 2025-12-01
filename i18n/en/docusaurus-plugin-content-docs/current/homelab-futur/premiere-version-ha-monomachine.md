@@ -10,7 +10,9 @@ Full English translation coming soon.
 
 ## Introduction
 
-**Important note**: This page describes the **initial project** I had planned to experiment with Kubernetes. This project **evolved** into a different final decision: a 3-node Proxmox cluster (see [3-Node Proxmox Cluster](./cluster-3-noeuds-proxmox.md)).
+:::note[Initial Project Not Implemented]
+This page describes the **initial project** I had planned to experiment with Kubernetes. This project **evolved** into a different final decision: a 3-node Proxmox cluster (see [3-Node Proxmox Cluster](./cluster-3-noeuds-proxmox.md)).
+:::
 
 The initial idea was to create a **transitional step** toward a complete distributed infrastructure, experimenting with Kubernetes (K3S), Infrastructure as Code (OpenTofu/Terraform), Git, and CI/CD pipelines, while remaining on a single physical machine.
 
@@ -101,39 +103,41 @@ This version serves as a **foundation** for the complete cluster:
 - Tested and validated Kubernetes manifests
 - Operational CI/CD pipelines
 
-## Evolution Toward Real Cluster
+## Evolution Toward Real Cluster (Initial Plan)
 
-Once stabilized, evolution toward multi-node cluster becomes natural:
+If this version had been implemented and stabilized, evolution toward multi-node cluster would have been natural:
 
 **Minimum for functional HA cluster**:
 - 3 nodes (1 control plane + 2 workers, or 3 mixed nodes)
 - Gigabit network switch
 - Distributed storage (Ceph ideally requires 5 nodes)
 
-**Migration strategy**:
-1. Add second node to existing cluster
+**Planned migration strategy**:
+1. Add second node to form a cluster
 2. Test pod distribution between nodes
-3. Add third node to enable HA
+3. Add third node for quorum and enable HA (or use a Qdevice)
 4. Deploy Ceph or Linstor for distributed storage
 5. Migrate critical workloads with replication
 
-## Conclusion
+## Conclusion and Evolution to 3-Node Cluster
 
-This single-machine "HA" version is an **essential pedagogical step** before deploying a real Kubernetes cluster:
+This initial single-machine "HA" homelab project was an **important reflection** in the evolution of my infrastructure:
 
-**Positive points**:
-- Learn Kubernetes without multi-node complexity
-- Validate architecture and configurations
-- Reduced cost and simplified maintenance
-- Solid foundation to evolve toward complete cluster
+**Positive points of initial reflection**:
+- Clear identification of Kubernetes learning objectives
+- Architecture and target configuration validation
+- Understanding of single-machine approach limitations
 
-**Assumed limitations**:
-- No real high availability
-- Distributed storage impossible to test (Ceph, Linstor)
-- Limited scalability
-- No realistic failure simulation
+**Final decision**:
+After analyzing the limitations, particularly the impossibility to test distributed aspects (high availability, Ceph storage, load distribution), I decided to opt directly for a **3-node Proxmox cluster**.
 
-This approach allows **methodical progression** toward a complete cloud-native infrastructure while mastering each step of the process.
+This decision allows:
+- Experimenting with real K3S VMs distributed across physical production nodes
+- Testing high availability and distributed storage (Ceph)
+- Learning complex networking aspects of a real cluster
+- Building a solid foundation for production-ready infrastructure
+
+For more details on the final architecture, see the [3-Node Proxmox Cluster](./cluster-3-noeuds-proxmox.md) page.
 
 :::note
 Detailed English translation of this page is in progress.
