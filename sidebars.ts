@@ -27,6 +27,18 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'OpenWRT',
+      link: {
+        type: 'doc',
+        id: 'openwrt/index',
+      },
+      items: [
+        'openwrt/backhaul-wifi-mesh',
+        'openwrt/gretap-vlan',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Homelab actuel - Docker Compose & Ansible',
       link: {
         type: 'doc',
