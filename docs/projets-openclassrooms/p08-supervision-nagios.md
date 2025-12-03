@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+tags: [nagios, supervision, monitoring, syslog]
 ---
 
 # Supervision avec Nagios

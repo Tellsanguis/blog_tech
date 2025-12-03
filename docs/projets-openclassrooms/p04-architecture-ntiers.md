@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+tags: [docker, conteneurisation, architecture-ntiers]
 ---
 
 # Architecture n-tiers Docker

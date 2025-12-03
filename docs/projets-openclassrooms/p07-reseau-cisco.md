@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+tags: [cisco, vlan, acl, etherchannel, nat, ipv6]
 ---
 
 # Configuration d'équipements Cisco

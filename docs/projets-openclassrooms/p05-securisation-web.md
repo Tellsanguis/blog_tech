@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+tags: [securite, apache, ssl, fail2ban, ftp]
 ---
 
 # Sécurisation de services web

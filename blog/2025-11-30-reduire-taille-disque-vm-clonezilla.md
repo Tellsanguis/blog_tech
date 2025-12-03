@@ -2,7 +2,7 @@
 slug: reduire-taille-disque-vm-clonezilla
 title: Réduire la taille du disque d'une VM avec Clonezilla
 authors: [tellserv]
-tags: [proxmox, clonezilla, virtualization, storage, linstor, drbd, disk-management]
+tags: [proxmox, clonezilla, virtualisation, stockage, linstor, drbd, gestion-disques]
 image: /img/blog/2025-11-30-reduire-disque-vm/clonezilla-logo.svg
 ---
 

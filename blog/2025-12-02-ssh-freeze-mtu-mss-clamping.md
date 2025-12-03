@@ -2,7 +2,7 @@
 slug: ssh-freeze-mtu-mss-clamping
 title: Freeze de session SSH, MTU et MSS clamping
 authors: [tellserv]
-tags: [openwrt, networking, ssh, mtu, mss-clamping, tunneling, gretap, troubleshooting]
+tags: [openwrt, reseau, ssh, mtu, mss-clamping, tunnels, gretap, depannage]
 image: /img/blog/2025-12-02-ssh-freeze-mtu/freeze_session_ssh.png
 ---
 

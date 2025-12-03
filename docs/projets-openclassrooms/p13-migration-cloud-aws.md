@@ -1,5 +1,6 @@
 ---
 sidebar_position: 13
+tags: [cloud, aws, migration, architecture]
 ---
 
 # Migration vers le Cloud AWS

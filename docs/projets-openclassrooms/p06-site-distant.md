@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+tags: [vpn, active-directory, windows-server, rodc, gpo]
 ---
 
 # Raccordement d'un site distant

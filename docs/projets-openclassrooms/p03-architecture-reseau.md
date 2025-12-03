@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+tags: [reseau, vlan, firewall, architecture, subnetting]
 ---
 
 # Conception réseau d'entreprise

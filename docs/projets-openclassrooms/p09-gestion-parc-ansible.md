@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+tags: [ansible, automatisation, glpi, cross-platform]
 ---
 
 # Gestion de parc avec Ansible

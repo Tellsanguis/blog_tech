@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+tags: [securite, anssi, conformite, sante]
 ---
 
 # Conformité ANSSI pour SI de santé

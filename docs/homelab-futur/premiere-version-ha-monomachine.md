@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-tags: [proxmox, kubernetes, k3s, ha, homelab]
+tags: [proxmox, kubernetes, k3s, haute-disponibilite, homelab]
 ---
 
 # Première version : le Homelab "HA" monomachine (projet initial)

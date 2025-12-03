@@ -1,5 +1,6 @@
 ---
 sidebar_position: 12
+tags: [securite, active-directory, pentest, audit]
 ---
 
 # Audit de sécurité Active Directory

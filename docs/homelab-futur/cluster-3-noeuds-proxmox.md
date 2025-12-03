@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-tags: [proxmox, cluster, ha, homelab]
+tags: [proxmox, cluster, haute-disponibilite, homelab]
 ---
 
 # Cluster 3 noeuds Proxmox : un véritable Homelab HA

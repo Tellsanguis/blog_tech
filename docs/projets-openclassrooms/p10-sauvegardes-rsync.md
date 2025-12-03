@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+tags: [sauvegarde, rsync, bash, pra]
 ---
 
 # Solution de sauvegarde robuste
