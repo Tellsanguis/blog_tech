@@ -2,7 +2,7 @@
 slug: linstor-drbd-opentofu-problemes
 title: "Deploying with OpenTofu on LINSTOR DRBD: the beginning of problems"
 authors: [tellserv]
-tags: [homelab, proxmox, linstor, drbd, opentofu, terraform, iac, gitops, kubernetes]
+tags: [opentofu, terraform, iac, infrastructure-as-code, proxmox, linstor, drbd, automation, devops]
 date: 2025-11-26
 ---
 

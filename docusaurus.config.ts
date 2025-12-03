@@ -23,6 +23,7 @@ const config: Config = {
 
   plugins: [
     'docusaurus-plugin-image-zoom',
+    './plugins/docusaurus-plugin-unified-tags',
   ],
 
   title: 'TellServ Tech Blog',
@@ -125,6 +126,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/tags', label: 'Tags', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',

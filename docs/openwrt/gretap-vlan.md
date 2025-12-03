@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Tunnels GREtap pour VLANs
+tags: [openwrt, gretap, vlan, networking, tunneling]
 ---
 
 # Tunnels GREtap pour VLANs à travers le mesh

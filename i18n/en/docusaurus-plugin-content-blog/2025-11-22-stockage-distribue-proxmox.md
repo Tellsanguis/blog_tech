@@ -2,7 +2,7 @@
 slug: stockage-distribue-proxmox-ha
 title: "Choosing a Distributed Storage Technology for a Proxmox HA Cluster"
 authors: [tellserv]
-tags: [proxmox, storage, ha, linstor, drbd, ceph, zfs, homelab]
+tags: [proxmox, high-availability, linstor, drbd, ceph, zfs, storage, clustering, homelab]
 ---
 
 # Choosing a Distributed Storage Technology for a Proxmox HA Cluster

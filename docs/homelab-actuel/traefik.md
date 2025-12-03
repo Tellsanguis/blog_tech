@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+tags: [traefik, docker, reverse-proxy, ssl, crowdsec, homelab]
 ---
 
 # Traefik - Reverse Proxy moderne

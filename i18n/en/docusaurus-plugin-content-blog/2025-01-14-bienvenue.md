@@ -2,7 +2,7 @@
 slug: bienvenue
 title: Welcome to TellServ Tech Blog
 authors: [tellserv]
-tags: [introduction, blog]
+tags: [homelab, devops, infrastructure, cloud]
 ---
 
 # Welcome to TellServ Tech Blog

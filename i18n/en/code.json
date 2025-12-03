@@ -51,5 +51,41 @@
   "homepage.feature3.description": {
     "message": "Sharing experiences and solutions with the community.",
     "description": "Description of feature 3 (knowledge sharing) on the homepage"
+  },
+  "tags.page.title": {
+    "message": "Tags",
+    "description": "Tags page title"
+  },
+  "tags.page.description": {
+    "message": "Browse content by tags",
+    "description": "Tags page meta description"
+  },
+  "tags.page.heading": {
+    "message": "Tags",
+    "description": "Tags page main heading"
+  },
+  "tags.filtered.title": {
+    "message": "{count} posts tagged with \"{tagName}\"",
+    "description": "Filtered tag page title"
+  },
+  "tags.filtered.description": {
+    "message": "Browse all content tagged with {tagName}",
+    "description": "Filtered tag page meta description"
+  },
+  "tags.filtered.heading": {
+    "message": "{count} posts tagged with \"{tagName}\"",
+    "description": "Filtered tag page heading"
+  },
+  "tags.viewAll": {
+    "message": "View All Tags",
+    "description": "View all tags link"
+  },
+  "tags.notFound.title": {
+    "message": "Tag Not Found",
+    "description": "Tag not found title"
+  },
+  "tags.notFound.description": {
+    "message": "The tag you are looking for does not exist.",
+    "description": "Tag not found description"
   }
 }

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+tags: [ansible, automation, iac, configuration-management, homelab]
 ---
 
 # Playbooks Ansible
