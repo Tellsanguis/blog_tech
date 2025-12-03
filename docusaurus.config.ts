@@ -24,11 +24,12 @@ const config: Config = {
   plugins: [
     'docusaurus-plugin-image-zoom',
     './plugins/docusaurus-plugin-unified-tags',
+    './plugins/docusaurus-plugin-recent-articles',
   ],
 
   title: 'TellServ Tech Blog',
   tagline: 'Recherches et réflexions sur les défis techniques',
-  favicon: 'img/favicon.png',
+  favicon: 'img/logo.png',
 
   url: 'https://docs.tellserv.fr',
   baseUrl: '/',

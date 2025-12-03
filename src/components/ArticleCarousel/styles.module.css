@@ -1,0 +1,281 @@
+/* Article Carousel Section */
+.carouselSection {
+  padding: 3rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.carouselTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--ifm-heading-color);
+}
+
+/* Carousel Container */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Carousel Track (overflow container) */
+.carouselTrack {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Carousel Inner (sliding container) */
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Carousel Item */
+.carouselItem {
+  flex: 0 0 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.carouselItem:hover {
+  text-decoration: none;
+}
+
+/* Article Thumbnail (auto-generated card) */
+.articleThumbnail {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.carouselItem:hover .articleThumbnail {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Article Type Badge */
+.articleBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.articleBadgeBlog {
+  background-color: #2563eb; /* Blue for blog */
+}
+
+.articleBadgeDoc {
+  background-color: #059669; /* Dark green for documentation */
+}
+
+/* Article Title */
+.articleTitle {
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.articleTitle h3 {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Article Date */
+.articleDate {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Carousel Navigation Arrows */
+.carouselArrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.carouselArrow:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carouselArrow:active {
+  transform: scale(0.95);
+}
+
+.carouselArrowLeft {
+  margin-right: 0.5rem;
+}
+
+.carouselArrowRight {
+  margin-left: 0.5rem;
+}
+
+/* Carousel Indicators (Dots) */
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carouselDot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-300);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carouselDot:hover {
+  background-color: var(--ifm-color-emphasis-500);
+  transform: scale(1.2);
+}
+
+.carouselDotActive {
+  background-color: var(--ifm-color-primary);
+  transform: scale(1.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+  .carouselTitle {
+    font-size: 1.75rem;
+  }
+
+  .articleThumbnail {
+    height: 350px;
+    padding: 1.5rem;
+  }
+
+  .articleTitle h3 {
+    font-size: 1.5rem;
+  }
+
+  .carouselArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carouselSection {
+    padding: 2rem 0;
+  }
+
+  .carouselTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .carouselContainer {
+    gap: 0.5rem;
+  }
+
+  .articleThumbnail {
+    height: 300px;
+    padding: 1rem;
+  }
+
+  .articleTitle h3 {
+    font-size: 1.25rem;
+  }
+
+  .articleBadge {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+
+  .articleDate {
+    font-size: 0.75rem;
+  }
+
+  .carouselArrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+
+  .carouselArrowLeft {
+    margin-right: 0.25rem;
+  }
+
+  .carouselArrowRight {
+    margin-left: 0.25rem;
+  }
+
+  .carouselDot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articleThumbnail {
+    height: 250px;
+  }
+
+  .articleTitle h3 {
+    font-size: 1.1rem;
+  }
+
+  .carouselArrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+  }
+}

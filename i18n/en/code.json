@@ -87,5 +87,29 @@
   "tags.notFound.description": {
     "message": "The tag you are looking for does not exist.",
     "description": "Tag not found description"
+  },
+  "carousel.title": {
+    "message": "Recent Articles",
+    "description": "Title of the article carousel section"
+  },
+  "carousel.badge.blog": {
+    "message": "BLOG",
+    "description": "Badge text for blog articles in carousel"
+  },
+  "carousel.badge.documentation": {
+    "message": "DOCUMENTATION",
+    "description": "Badge text for documentation pages in carousel"
+  },
+  "carousel.previous": {
+    "message": "Previous article",
+    "description": "Previous article button aria-label"
+  },
+  "carousel.next": {
+    "message": "Next article",
+    "description": "Next article button aria-label"
+  },
+  "carousel.goToSlide": {
+    "message": "Go to slide {index}",
+    "description": "Go to slide button aria-label"
   }
 }
