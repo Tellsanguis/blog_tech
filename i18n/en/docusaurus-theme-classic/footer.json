@@ -1,0 +1,10 @@
+{
+  "link.title.Documentation": {
+    "message": "Documentation",
+    "description": "Footer link title for Documentation section"
+  },
+  "link.item.label.À propos": {
+    "message": "About",
+    "description": "Footer link label for About page"
+  }
+}

@@ -127,6 +127,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/tags', label: 'Tags', position: 'left'},
+        {to: '/about', label: 'À propos', position: 'right'},
         {
           type: 'localeDropdown',
           position: 'right',
@@ -152,8 +153,8 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Présentation',
-              to: '/docs/presentation',
+              label: 'À propos',
+              to: '/about',
             },
           ],
         },
