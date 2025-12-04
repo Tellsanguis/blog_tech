@@ -25,6 +25,13 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     './plugins/docusaurus-plugin-unified-tags',
     './plugins/docusaurus-plugin-recent-articles',
+    [
+      './plugins/docusaurus-plugin-plausible-custom',
+      {
+        domain: 'docs.tellserv.fr',
+        scriptSrc: 'https://plausible.tellserv.fr/js/script.js',
+      },
+    ],
   ],
 
   title: 'TellServ Tech Blog',
