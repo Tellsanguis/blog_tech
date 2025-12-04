@@ -111,5 +111,9 @@
   "carousel.goToSlide": {
     "message": "Go to slide {index}",
     "description": "Go to slide button aria-label"
+  },
+  "homepage.illustrationCredit": {
+    "message": "Illustration by {artistLink}",
+    "description": "The credit for the homepage illustration"
   }
 }

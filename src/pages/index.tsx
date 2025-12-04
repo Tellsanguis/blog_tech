@@ -15,35 +15,62 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">
-          <Translate
-            id="homepage.tagline"
-            description="The homepage tagline">
-            Recherches et réflexions sur les défis techniques
-          </Translate>
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/projets-openclassrooms">
-            <Translate
-              id="homepage.discoverDocs"
-              description="The homepage button to discover the documentation">
-              Découvrir la documentation
-            </Translate>
-          </Link>
-          <Link
-            className="button button--secondary button--lg margin-left--md"
-            to="/blog">
-            <Translate
-              id="homepage.readBlog"
-              description="The homepage button to read the blog">
-              Lire le blog
-            </Translate>
-          </Link>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContent}>
+            <Heading as="h1" className="hero__title">
+              {siteConfig.title}
+            </Heading>
+            <p className="hero__subtitle">
+              <Translate
+                id="homepage.tagline"
+                description="The homepage tagline">
+                Recherches et réflexions sur les défis techniques
+              </Translate>
+            </p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/projets-openclassrooms">
+                <Translate
+                  id="homepage.discoverDocs"
+                  description="The homepage button to discover the documentation">
+                  Découvrir la documentation
+                </Translate>
+              </Link>
+              <Link
+                className="button button--secondary button--lg margin-left--md"
+                to="/blog">
+                <Translate
+                  id="homepage.readBlog"
+                  description="The homepage button to read the blog">
+                  Lire le blog
+                </Translate>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.heroIllustration}>
+            <img
+              src="/img/illustration_vache.png"
+              alt="TellServ Tech Blog Illustration"
+            />
+            <div className={styles.illustrationCredit}>
+              <Translate
+                id="homepage.illustrationCredit"
+                description="The credit for the homepage illustration"
+                values={{
+                  artistLink: (
+                    <a
+                      href="https://vassile.fr"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Vassile
+                    </a>
+                  ),
+                }}>
+                {'Illustration par {artistLink}'}
+              </Translate>
+            </div>
+          </div>
         </div>
       </div>
     </header>
