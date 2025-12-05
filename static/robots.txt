@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Empêcher l'indexation des pages de recherche
+Disallow: /search
+
+# Sitemap
+Sitemap: https://docs.tellserv.fr/sitemap.xml
+
+# Crawl-delay pour les bots agressifs
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

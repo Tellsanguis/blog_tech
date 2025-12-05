@@ -38,6 +38,7 @@ const config: Config = {
   tagline: 'Recherches et réflexions sur les défis techniques',
   favicon: 'img/logo.png',
 
+
   url: 'https://docs.tellserv.fr',
   baseUrl: '/',
 
@@ -110,8 +111,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
     metadata: [
+      {name: 'description', content: 'Blog technique sur le homelab, DevOps, Kubernetes et l\'infrastructure as code. Documentation et tutoriels sur Docker, OpenTofu, Ansible et K3s.'},
       {name: 'keywords', content: 'homelab, kubernetes, docker, devops, opentofu, ansible, k3s, infrastructure as code'},
       {name: 'author', content: 'TellServ'},
     ],
