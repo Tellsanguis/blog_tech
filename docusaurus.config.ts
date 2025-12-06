@@ -36,8 +36,8 @@ const config: Config = {
     './docusaurus.config.webpack.js',
   ],
 
-  title: 'TellServ Tech Blog',
-  tagline: 'Recherches et réflexions sur les défis techniques',
+  title: 'Tellserv Tech Blog',
+  tagline: 'Sysadmin réseau et sécurité pratiquant l\'amélioration continue : du bare-metal à l\'IaC, vers une pratique DevOps/GitOps',
   favicon: 'img/logo.png',
 
 
@@ -89,9 +89,9 @@ const config: Config = {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
-            title: 'TellServ Tech Blog',
-            description: 'Recherches et réflexions sur les défis techniques',
-            copyright: `Copyright © ${new Date().getFullYear()} TellServ.`,
+            title: 'BENE Maël',
+            description: 'Sysadmin réseau et sécurité pratiquant l\'amélioration continue : du bare-metal à l\'IaC, vers une pratique DevOps/GitOps',
+            copyright: `Copyright © ${new Date().getFullYear()} BENE Maël.`,
             language: 'fr',
           },
           editUrl: 'https://forgejo.tellserv.fr/Tellsanguis/blog_tech/src/branch/main/',
@@ -117,7 +117,7 @@ const config: Config = {
     metadata: [
       {name: 'description', content: 'Blog technique sur le homelab, DevOps, Kubernetes et l\'infrastructure as code. Documentation et tutoriels sur Docker, OpenTofu, Ansible et K3s.'},
       {name: 'keywords', content: 'homelab, kubernetes, docker, devops, opentofu, ansible, k3s, infrastructure as code'},
-      {name: 'author', content: 'TellServ'},
+      {name: 'author', content: 'BENE Maël'},
     ],
     colorMode: {
       defaultMode: 'light',
@@ -125,9 +125,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'TellServ Tech Blog',
+      title: 'Tellserv Tech Blog',
       logo: {
-        alt: 'TellServ Logo',
+        alt: 'Tellserv Tech Blog Logo',
         src: 'img/logo.png',
       },
       items: [
@@ -200,7 +200,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} TellServ. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} BENE Maël. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

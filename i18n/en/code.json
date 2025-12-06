@@ -12,9 +12,17 @@
     "message": "Home",
     "description": "The homepage title"
   },
+  "homepage.mainTitle": {
+    "message": "BENE Maël's Blog",
+    "description": "The homepage main title"
+  },
   "homepage.tagline": {
-    "message": "Research and reflections on technical challenges",
+    "message": "I break, build, and secure systems - especially in my homelab.",
     "description": "The homepage tagline"
+  },
+  "homepage.tagline2": {
+    "message": "Network and security sysadmin practicing continuous improvement: from bare-metal to IaC, towards DevOps/GitOps practices.",
+    "description": "The homepage tagline second line"
   },
   "homepage.description": {
     "message": "Technical blog to document my research and reflections on technical challenges",

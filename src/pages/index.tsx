@@ -18,14 +18,28 @@ function HomepageHeader() {
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
             <Heading as="h1" className="hero__title">
-              {siteConfig.title}
+              <Translate
+                id="homepage.mainTitle"
+                description="The homepage main title">
+                Blog de BENE Maël
+              </Translate>
             </Heading>
             <p className="hero__subtitle">
               <Translate
                 id="homepage.tagline"
                 description="The homepage tagline">
-                Recherches et réflexions sur les défis techniques
+                Je casse, construis et sécurise des systèmes - surtout dans mon homelab.
               </Translate>
+              <br />
+              <Translate
+                id="homepage.tagline2"
+                description="The homepage tagline second line">
+                Sysadmin réseau et sécurité pratiquant l'amélioration continue : du bare-metal à l'IaC, vers une pratique DevOps/GitOps.
+              </Translate>
+              <br />
+              <span style={{fontWeight: 500, opacity: 0.9}}>
+                Proxmox · Docker · Ansible · OPNsense · Linux
+              </span>
             </p>
             <div className={styles.buttons}>
               <Link
