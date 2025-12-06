@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: OpenWRT
+last_update:
+  date: 2025-12-02
 ---
 
 # OpenWRT

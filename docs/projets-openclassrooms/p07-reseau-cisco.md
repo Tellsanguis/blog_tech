@@ -1,6 +1,8 @@
 ---
 sidebar_position: 7
 tags: [cisco, vlan, acl, etherchannel, nat, ipv6]
+last_update:
+  date: 2025-11-22
 ---
 
 # Configuration d'équipements Cisco

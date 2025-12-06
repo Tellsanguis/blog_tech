@@ -1,6 +1,8 @@
 ---
 sidebar_position: 12
 tags: [securite, active-directory, pentest, audit]
+last_update:
+  date: 2025-11-22
 ---
 
 # Audit de sécurité Active Directory

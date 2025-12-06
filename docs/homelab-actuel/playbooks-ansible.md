@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 tags: [ansible, automatisation, iac, homelab]
+last_update:
+  date: 2025-12-03
 ---
 
 # Playbooks Ansible

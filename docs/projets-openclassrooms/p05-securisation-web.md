@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 tags: [securite, apache, ssl, fail2ban, ftp]
+last_update:
+  date: 2025-11-22
 ---
 
 # Sécurisation de services web

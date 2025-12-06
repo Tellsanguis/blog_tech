@@ -1,6 +1,8 @@
 ---
 sidebar_position: 11
 tags: [securite, anssi, conformite, sante]
+last_update:
+  date: 2025-11-22
 ---
 
 # Conformité ANSSI pour SI de santé

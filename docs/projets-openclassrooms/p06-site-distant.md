@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 tags: [vpn, active-directory, windows-server, rodc, gpo]
+last_update:
+  date: 2025-11-22
 ---
 
 # Raccordement d'un site distant

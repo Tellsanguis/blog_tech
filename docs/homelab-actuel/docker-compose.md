@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 tags: [docker, docker-compose, conteneurisation, homelab]
+last_update:
+  date: 2025-11-25
 ---
 
 # Docker et Docker Compose

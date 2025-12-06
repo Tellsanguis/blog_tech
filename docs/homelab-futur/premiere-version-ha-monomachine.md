@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 tags: [proxmox, kubernetes, k3s, haute-disponibilite, homelab]
+last_update:
+  date: 2025-12-03
 ---
 
 # Première version : le Homelab "HA" monomachine (projet initial)

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+last_update:
+  date: 2025-11-22
 ---
 
 # Projets OpenClassrooms

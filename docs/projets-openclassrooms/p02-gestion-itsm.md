@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 tags: [itsm, itil, glpi, gestion-parc]
+last_update:
+  date: 2025-11-22
 ---
 
 # Gestion des demandes au quotidien

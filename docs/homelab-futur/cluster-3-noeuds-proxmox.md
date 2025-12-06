@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 tags: [proxmox, cluster, haute-disponibilite, homelab]
+last_update:
+  date: 2025-12-03
 ---
 
 # Cluster 3 noeuds Proxmox : un véritable Homelab HA

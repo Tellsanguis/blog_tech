@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 tags: [docker, conteneurisation, architecture-ntiers]
+last_update:
+  date: 2025-11-22
 ---
 
 # Architecture n-tiers Docker

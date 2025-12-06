@@ -1,6 +1,8 @@
 ---
 sidebar_position: 10
 tags: [sauvegarde, rsync, bash, pra]
+last_update:
+  date: 2025-11-22
 ---
 
 # Solution de sauvegarde robuste

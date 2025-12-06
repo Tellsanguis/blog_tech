@@ -1,6 +1,8 @@
 ---
 sidebar_position: 13
 tags: [cloud, aws, migration, architecture]
+last_update:
+  date: 2025-11-22
 ---
 
 # Migration vers le Cloud AWS

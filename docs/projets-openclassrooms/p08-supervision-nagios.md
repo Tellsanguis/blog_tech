@@ -1,6 +1,8 @@
 ---
 sidebar_position: 8
 tags: [nagios, supervision, monitoring, syslog]
+last_update:
+  date: 2025-11-22
 ---
 
 # Supervision avec Nagios

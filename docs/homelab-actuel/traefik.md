@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 tags: [traefik, docker, reverse-proxy, ssl, crowdsec, homelab]
+last_update:
+  date: 2025-11-30
 ---
 
 # Traefik - Reverse Proxy moderne
