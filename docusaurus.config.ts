@@ -25,6 +25,7 @@ const config: Config = {
     'docusaurus-plugin-image-zoom',
     './plugins/docusaurus-plugin-unified-tags',
     './plugins/docusaurus-plugin-recent-articles',
+    './plugins/docusaurus-plugin-rss-aggregator',
     [
       './plugins/docusaurus-plugin-plausible-custom',
       {
@@ -32,6 +33,7 @@ const config: Config = {
         scriptSrc: 'https://plausible.tellserv.fr/js/script.js',
       },
     ],
+    './docusaurus.config.webpack.js',
   ],
 
   title: 'TellServ Tech Blog',
@@ -137,6 +139,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/tags', label: 'Tags', position: 'left'},
+        {to: '/veille', label: 'Veille', position: 'left'},
         {to: '/about', label: 'À propos', position: 'right'},
         {
           type: 'localeDropdown',
@@ -153,6 +156,12 @@ const config: Config = {
           position: 'right',
           className: 'header-forgejo-link',
           'aria-label': 'Forgejo profile',
+        },
+        {
+          href: 'https://docs.tellserv.fr/blog/atom.xml',
+          position: 'right',
+          className: 'header-rss-link',
+          'aria-label': 'RSS Feed',
         },
       ],
     },

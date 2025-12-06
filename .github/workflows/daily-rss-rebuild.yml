@@ -1,0 +1,42 @@
+name: Daily RSS Feed Rebuild
+
+on:
+  schedule:
+    # Tous les jours à 6h UTC (7h CET / 8h CEST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Permet de déclencher manuellement le workflow
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher le rebuild Cloudflare Pages
+        run: |
+          echo "Déclenchement du rebuild pour mettre à jour les flux RSS..."
+
+          # Récupération du dernier commit pour le déploiement
+          RESPONSE=$(curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ secrets.CLOUDFLARE_PROJECT_NAME }}/deployments" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{
+              "branch": "main"
+            }')
+
+          echo "$RESPONSE"
+
+          # Vérification du succès
+          if echo "$RESPONSE" | grep -q '"success":true'; then
+            echo "✅ Rebuild Cloudflare Pages déclenché avec succès"
+          else
+            echo "❌ Échec du déclenchement du rebuild"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
+      - name: Résumé
+        run: |
+          echo "## Rebuild quotidien des flux RSS" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Le rebuild a été déclenché avec succès sur Cloudflare Pages." >> $GITHUB_STEP_SUMMARY
+          echo "Les flux RSS seront mis à jour avec les articles des dernières 24h." >> $GITHUB_STEP_SUMMARY

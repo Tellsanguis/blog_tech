@@ -26,7 +26,8 @@
    ============================================ */
 
 .header-github-link::before,
-.header-forgejo-link::before {
+.header-forgejo-link::before,
+.header-rss-link::before {
   content: '';
   display: flex;
   width: 24px;
@@ -47,9 +48,15 @@
   background-image: url('/img/forgejo-logo.svg');
 }
 
+/* RSS icon */
+.header-rss-link::before {
+  background-image: url('/img/rss-color-svgrepo-com.svg');
+}
+
 /* Hide the default link text (if any) */
 .header-github-link > span,
-.header-forgejo-link > span {
+.header-forgejo-link > span,
+.header-rss-link > span {
   display: none;
 }
 
@@ -68,7 +75,8 @@
    ============================================ */
 
 .header-github-link:hover::before,
-.header-forgejo-link:hover::before {
+.header-forgejo-link:hover::before,
+.header-rss-link:hover::before {
   opacity: 0.8;
 }
 
@@ -88,6 +96,15 @@
 
 [data-theme='dark'] .header-forgejo-link:hover::before {
   filter: drop-shadow(0 0 8px rgba(255, 102, 0, 0.8));
+}
+
+/* RSS hover glow effect - orange RSS color */
+.header-rss-link:hover::before {
+  filter: drop-shadow(0 0 6px rgba(255, 153, 0, 0.7));
+}
+
+[data-theme='dark'] .header-rss-link:hover::before {
+  filter: drop-shadow(0 0 8px rgba(255, 153, 0, 0.8));
 }
 
 /* ============================================

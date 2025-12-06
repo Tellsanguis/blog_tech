@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Veille Technologique (SysAdmin, SRE, GitOps)</title>
+    <dateCreated>Fri, 05 Dec 2025 12:00:00 GMT</dateCreated>
+    <ownerName>Gemini Assistant</ownerName>
+  </head>
+  <body>
+    <outline text="Systèmes / Linux / Infra" title="Systèmes / Linux / Infra">
+      <outline type="rss" text="LWN.net (Linux Kernel)" title="LWN.net (Linux Kernel)" xmlUrl="https://lwn.net/headlines/rss" />
+      <outline type="rss" text="Brendan Gregg's Blog (Performance)" title="Brendan Gregg's Blog (Performance)" xmlUrl="http://www.brendangregg.com/blog/rss.xml" />
+      <outline type="rss" text="Phoronix (Linux Hardware &amp; Benchmarks)" title="Phoronix (Linux Hardware &amp; Benchmarks)" xmlUrl="https://www.phoronix.com/rss.php" />
+      <outline type="rss" text="Arch Linux News" title="Arch Linux News" xmlUrl="https://archlinux.org/feeds/news/" />
+      <outline type="rss" text="Stéphane Bortzmeyer (FR)" title="Stéphane Bortzmeyer (FR)" xmlUrl="http://www.bortzmeyer.org/feed.atom" />
+      <outline type="rss" text="LinuxFR.org" title="LinuxFR.org" xmlUrl="https://linuxfr.org/news.atom" />
+    </outline>
+    <outline text="SRE / DevOps / GitOps" title="SRE / DevOps / GitOps">
+      <outline type="rss" text="Google SRE Blog" title="Google SRE Blog" xmlUrl="https://cloudblog.withgoogle.com/rss" />
+      <outline type="rss" text="Netflix Technology Blog" title="Netflix Technology Blog" xmlUrl="http://techblog.netflix.com/feeds/posts/default?alt=rss" />
+      <outline type="rss" text="GitLab Blog" title="GitLab Blog" xmlUrl="https://about.gitlab.com/atom.xml" />
+      <outline type="rss" text="DevOps.com" title="DevOps.com" xmlUrl="https://devops.com/feed/" />
+      <outline type="rss" text="The Register - DevOps" title="The Register - DevOps" xmlUrl="https://www.theregister.com/devops/headlines.atom" />
+    </outline>
+    <outline text="Kubernetes / Cloud / Conteneurs" title="Kubernetes / Cloud / Conteneurs">
+      <outline type="rss" text="Kubernetes Blog" title="Kubernetes Blog" xmlUrl="https://kubernetes.io/feed.xml" />
+      <outline type="rss" text="AWS Blog" title="AWS Blog" xmlUrl="https://aws.amazon.com/blogs/aws/feed/" />
+      <outline type="rss" text="Google Cloud Blog" title="Google Cloud Blog" xmlUrl="https://cloudblog.withgoogle.com/rss" />
+      <outline type="rss" text="Azure Blog" title="Azure Blog" xmlUrl="https://azure.microsoft.com/fr-fr/blog/feed/" />
+      <outline type="rss" text="Docker Blog" title="Docker Blog" xmlUrl="https://www.docker.com/blog/feed/" />
+      <outline type="rss" text="Red Hat Blog" title="Red Hat Blog" xmlUrl="https://www.redhat.com/en/rss/blog" />
+      <outline type="rss" text="HashiCorp Blog" title="HashiCorp Blog" xmlUrl="https://www.hashicorp.com/blog/feed.xml" />
+      <outline type="rss" text="OVHcloud Blog (FR)" title="OVHcloud Blog (FR)" xmlUrl="https://blog.ovhcloud.com/category/ovhcloud-en-francais/feed/" />
+    </outline>
+    <outline text="Sécurité / Vulnérabilités / Cyber" title="Sécurité / Vulnérabilités / Cyber">
+      <outline type="rss" text="The Hacker News" title="The Hacker News" xmlUrl="http://www.thehackernews.com/feeds/posts/default" />
+      <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" />
+      <outline type="rss" text="Schneier on Security" title="Schneier on Security" xmlUrl="https://www.schneier.com/feed/" />
+      <outline type="rss"text="Naked Security by Sophos" title="Naked Security by Sophos" xmlUrl="https://nakedsecurity.sophos.com/feed/" />
+      <outline type="rss" text="Dark Reading" title="Dark Reading" xmlUrl="https://www.darkreading.com/rss.xml" />
+      <outline type="rss" text="CERT-FR (ANSSI)" title="CERT-FR (ANSSI)" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" />
+    </outline>
+    <outline text="Réseaux / Matériel / Automatisation" title="Réseaux / Matériel / Automatisation">
+      <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/" />
+      <outline type="rss" text="ipspace.net by Ivan Pepelnjak" title="ipspace.net by Ivan Pepelnjak" xmlUrl="https://blog.ipspace.net/atom.xml" />
+      <outline type="rss" text="Ansible Announcements" title="Ansible Announcements" xmlUrl="https://announcements.ansiblecloud.redhat.com/feed.atom" />
+    </outline>
+    <outline text="Veille généraliste Tech / Professionnelle" title="Veille généraliste Tech / Professionnelle">
+      <outline type="rss" text="Hacker News" title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" />
+      <outline type="rss" text="Lobste.rs" title="Lobste.rs" xmlUrl="https://lobste.rs/rss" />
+      <outline type="rss" text="Ars Technica" title="Ars Technica" xmlUrl="http://feeds.arstechnica.com/arstechnica/index/" />
+      <outline type="rss" text="Le Journal du Hacker (FR)" title="Le Journal du Hacker (FR)" xmlUrl="https://www.journalduhacker.net/rss" />
+      <outline type="rss" text="Next INpact (FR)" title="Next INpact (FR)" xmlUrl="https://next.ink/feed" />
+      <outline type="rss" text="The Pragmatic Engineer" title="The Pragmatic Engineer" xmlUrl="https://blog.pragmaticengineer.com/rss/" />
+      <outline type="rss" text="Korben (FR)" title="Korben (FR)" xmlUrl="https://korben.info/feed" />
+      <outline type="rss" text="Developpez.com (FR)" title="Developpez.com (FR)" xmlUrl="https://www.developpez.com/index/rss" />
+      <outline type="rss" text="Le Monde Informatique (FR)" title="Le Monde Informatique (FR)" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/thematique/toute-l-actualite/rss.xml" />
+    </outline>
+  </body>
+</opml>

@@ -2,5 +2,9 @@
   "item.label.À propos": {
     "message": "About",
     "description": "Navbar item label for the About page"
+  },
+  "item.label.Veille": {
+    "message": "Tech Watch",
+    "description": "Navbar item label for the Tech Watch page"
   }
 }
