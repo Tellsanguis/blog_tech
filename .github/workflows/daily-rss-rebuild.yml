@@ -9,6 +9,8 @@ on:
 jobs:
   trigger-rebuild:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Nécessaire pour push sur le dépôt
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
