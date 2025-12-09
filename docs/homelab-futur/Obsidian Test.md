@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 tags: [tag1, tag2, tag3]
 last_update:
-  date: YYYY-MM-DD
+  date: 2025-12-09
 ---
 
 # Titre de la page
