@@ -163,20 +163,6 @@ Les templates facilitent la création d'articles et de documentation avec le bon
 
 Pour voir les propriétés YAML (frontmatter) directement dans l'éditeur, sélectionner "source" dans les paramètres d'affichage des propriétés.
 
-### Template pour article de blog
-
-<a href="/templates/blog-cheatsheet.md" download>Télécharger blog-cheatsheet.md</a>
-
-Ce template contient le frontmatter complet pour un article de blog avec tous les exemples de syntaxe Markdown et Docusaurus.
-
-### Template pour documentation
-
-<a href="/templates/doc-cheatsheet.md" download>Télécharger doc-cheatsheet.md</a>
-
-Ce template contient le frontmatter complet pour une page de documentation avec tous les exemples de syntaxe.
-
-**Note importante** : `&#123;&#123;date:YYYY-MM-DD&#125;&#125;` est automatiquement remplacé par Obsidian lors de l'insertion du template avec la date du jour.
-
 ## Workflow d'utilisation au quotidien
 
 ### Créer un nouvel article de blog
