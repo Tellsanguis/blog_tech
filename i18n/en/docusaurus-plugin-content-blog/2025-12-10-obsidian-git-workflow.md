@@ -175,7 +175,7 @@ This template contains the complete frontmatter for a blog post with all Markdow
 
 This template contains the complete frontmatter for a documentation page with all syntax examples.
 
-**Important note**: `{{date:YYYY-MM-DD}}` is automatically replaced by Obsidian when inserting the template with the current date.
+**Important note**: `&#123;&#123;date:YYYY-MM-DD&#125;&#125;` is automatically replaced by Obsidian when inserting the template with the current date.
 
 ## Daily workflow
 
