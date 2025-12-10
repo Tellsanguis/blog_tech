@@ -9,6 +9,10 @@ image: /img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg
 
 How I configured Obsidian with the Git plugin to write and synchronize my blog posts and technical documentation, with custom templates and a clean Git workflow.
 
+<p align="center">
+  <img src="/img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg" alt="Obsidian Logo" width="300" />
+</p>
+
 <!--truncate-->
 
 ## Context and motivation
@@ -162,20 +166,6 @@ Templates facilitate creating articles and documentation with the correct frontm
 ![Properties in source documents](/img/blog/2025-12-10-obsidian-git/proprietes_dans_les_documents_source.png)
 
 To see YAML properties (frontmatter) directly in the editor, select "source" in the property display settings.
-
-### Blog post template
-
-<a href="/templates/blog-cheatsheet.md" download>Download blog-cheatsheet.md</a>
-
-This template contains the complete frontmatter for a blog post with all Markdown and Docusaurus syntax examples.
-
-### Documentation template
-
-<a href="/templates/doc-cheatsheet.md" download>Download doc-cheatsheet.md</a>
-
-This template contains the complete frontmatter for a documentation page with all syntax examples.
-
-**Important note**: `&#123;&#123;date:YYYY-MM-DD&#125;&#125;` is automatically replaced by Obsidian when inserting the template with the current date.
 
 ## Daily workflow
 

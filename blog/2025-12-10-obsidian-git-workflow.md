@@ -9,6 +9,10 @@ image: /img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg
 
 Comment j'ai configuré Obsidian avec le plugin Git pour rédiger et synchroniser mes articles de blog et ma documentation technique, avec des templates personnalisés et un workflow Git propre.
 
+<p align="center">
+  <img src="/img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg" alt="Obsidian Logo" width="300" />
+</p>
+
 <!--truncate-->
 
 ## Contexte et motivation
@@ -162,20 +166,6 @@ Les templates facilitent la création d'articles et de documentation avec le bon
 ![Propriétés dans les documents source](/img/blog/2025-12-10-obsidian-git/proprietes_dans_les_documents_source.png)
 
 Pour voir les propriétés YAML (frontmatter) directement dans l'éditeur, sélectionner "source" dans les paramètres d'affichage des propriétés.
-
-### Template pour article de blog
-
-<a href="/templates/blog-cheatsheet.md" download>Télécharger blog-cheatsheet.md</a>
-
-Ce template contient le frontmatter complet pour un article de blog avec tous les exemples de syntaxe Markdown et Docusaurus.
-
-### Template pour documentation
-
-<a href="/templates/doc-cheatsheet.md" download>Télécharger doc-cheatsheet.md</a>
-
-Ce template contient le frontmatter complet pour une page de documentation avec tous les exemples de syntaxe.
-
-**Note importante** : `&#123;&#123;date:YYYY-MM-DD&#125;&#125;` est automatiquement remplacé par Obsidian lors de l'insertion du template avec la date du jour.
 
 ## Workflow d'utilisation au quotidien
 
