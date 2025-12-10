@@ -165,13 +165,13 @@ To see YAML properties (frontmatter) directly in the editor, select "source" in 
 
 ### Blog post template
 
-[Download blog-cheatsheet.md](/templates/blog-cheatsheet.md)
+<a href="/templates/blog-cheatsheet.md" download>Download blog-cheatsheet.md</a>
 
 This template contains the complete frontmatter for a blog post with all Markdown and Docusaurus syntax examples.
 
 ### Documentation template
 
-[Download doc-cheatsheet.md](/templates/doc-cheatsheet.md)
+<a href="/templates/doc-cheatsheet.md" download>Download doc-cheatsheet.md</a>
 
 This template contains the complete frontmatter for a documentation page with all syntax examples.
 
