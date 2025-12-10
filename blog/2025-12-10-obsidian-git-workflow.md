@@ -165,13 +165,13 @@ Pour voir les propriétés YAML (frontmatter) directement dans l'éditeur, séle
 
 ### Template pour article de blog
 
-[Télécharger blog-cheatsheet.md](/templates/blog-cheatsheet.md)
+<a href="/templates/blog-cheatsheet.md" download>Télécharger blog-cheatsheet.md</a>
 
 Ce template contient le frontmatter complet pour un article de blog avec tous les exemples de syntaxe Markdown et Docusaurus.
 
 ### Template pour documentation
 
-[Télécharger doc-cheatsheet.md](/templates/doc-cheatsheet.md)
+<a href="/templates/doc-cheatsheet.md" download>Télécharger doc-cheatsheet.md</a>
 
 Ce template contient le frontmatter complet pour une page de documentation avec tous les exemples de syntaxe.
 
