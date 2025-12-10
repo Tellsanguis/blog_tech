@@ -142,7 +142,7 @@ This correctly identifies the commit author in Git history.
 
 #### "Commit message" section
 
-- `Commit message`: **"vault backup: {{date}}"**
+- `Commit message`: **"vault backup: &#123;&#123;date&#125;&#125;"**
 
 This syntax provides automatic commit messages with the date, for example: `vault backup: 2025-12-10 14:30`
 
