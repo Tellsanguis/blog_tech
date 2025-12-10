@@ -9,6 +9,10 @@ image: /img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg
 
 Comment j'ai configuré Obsidian avec le plugin Git pour rédiger et synchroniser mes articles de blog et ma documentation technique, avec des templates personnalisés et un workflow Git propre.
 
+<p align="center">
+  <img src="/img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg" alt="Obsidian Logo" width="300" />
+</p>
+
 <!--truncate-->
 
 ## Contexte et motivation

@@ -9,6 +9,10 @@ image: /img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg
 
 How I configured Obsidian with the Git plugin to write and synchronize my blog posts and technical documentation, with custom templates and a clean Git workflow.
 
+<p align="center">
+  <img src="/img/blog/2025-12-10-obsidian-git/2023_Obsidian_logo.svg" alt="Obsidian Logo" width="300" />
+</p>
+
 <!--truncate-->
 
 ## Context and motivation
