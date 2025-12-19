@@ -144,7 +144,7 @@ The LXC 103 container acts as an NFS server with the following characteristics:
 - **Mount Point (mp0)**: `/zpool1/data-nfs-share,mp=/data-nfs-share,shared=1`
 
 :::warning Important: shared=1 option
-The `shared=1` option is **mandatory** for ZFS dataset bind mount. Without this option, the container could encounter access or permission issues when mounting the dataset from the host node.
+The `shared=1` option is **mandatory** for the ZFS dataset bind mount. This option tells Proxmox VE that this storage is shared across cluster nodes, allowing High Availability (HA) to work properly without being blocked.
 :::
 
 :::tip Why Linstor DRBD for LXC rootfs?

@@ -144,7 +144,7 @@ Le conteneur LXC 103 joue le rôle de serveur NFS avec les caractéristiques sui
 - **Mount Point (mp0)** : `/zpool1/data-nfs-share,mp=/data-nfs-share,shared=1`
 
 :::warning Important : option shared=1
-L'option `shared=1` est **obligatoire** pour le bind mount du dataset ZFS. Sans cette option, le conteneur pourrait rencontrer des problèmes d'accès ou de permissions lors du montage du dataset depuis le nœud hôte.
+L'option `shared=1` est **obligatoire** pour le bind mount du dataset ZFS. Cette option indique à Proxmox VE que ce stockage est partagé entre les nœuds du cluster, permettant ainsi à la haute disponibilité (HA) de fonctionner correctement sans être bloquée
 :::
 
 :::tip Pourquoi Linstor DRBD pour le rootfs du LXC ?
