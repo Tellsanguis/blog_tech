@@ -74,14 +74,30 @@ module.exports = function pluginRecentArticles(context, options) {
         const recentBlog = blogArticles.slice(0, 3);
         const recentDocs = docArticles.slice(0, 3);
 
-        // Intercalate blog and documentation articles: blog, doc, blog, doc, blog, doc
+        // Determine which type has the most recent content
+        const mostRecentBlog = recentBlog.length > 0 ? new Date(recentBlog[0].date) : new Date(0);
+        const mostRecentDoc = recentDocs.length > 0 ? new Date(recentDocs[0].date) : new Date(0);
+        const startWithBlog = mostRecentBlog >= mostRecentDoc;
+
+        // Intercalate blog and documentation articles, starting with the most recent type
         const articles = [];
         for (let i = 0; i < Math.max(recentBlog.length, recentDocs.length); i++) {
-          if (i < recentBlog.length) {
-            articles.push(recentBlog[i]);
-          }
-          if (i < recentDocs.length) {
-            articles.push(recentDocs[i]);
+          if (startWithBlog) {
+            // Start with blog: blog, doc, blog, doc, blog, doc
+            if (i < recentBlog.length) {
+              articles.push(recentBlog[i]);
+            }
+            if (i < recentDocs.length) {
+              articles.push(recentDocs[i]);
+            }
+          } else {
+            // Start with doc: doc, blog, doc, blog, doc, blog
+            if (i < recentDocs.length) {
+              articles.push(recentDocs[i]);
+            }
+            if (i < recentBlog.length) {
+              articles.push(recentBlog[i]);
+            }
           }
         }
 

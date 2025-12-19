@@ -61,17 +61,7 @@ const sidebars: SidebarsConfig = {
         'homelab-futur/cluster-3-noeuds-proxmox',
       ],
     },
-    {
-      type: 'category',
-      label: 'Infrastructure de stockage',
-      link: {
-        type: 'doc',
-        id: 'zfs-replication-nfs/index',
-      },
-      items: [
-        'zfs-replication-nfs/index',
-      ],
-    },
+    'zfs-replication-nfs',
   ],
 };
 
