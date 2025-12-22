@@ -35,9 +35,9 @@ const RSSFeedWidget: React.FC = () => {
     error: isEnglish ? 'Error loading RSS feeds' : 'Erreur lors du chargement des flux RSS',
     noArticles: isEnglish ? 'No articles published in the last 24 hours in monitored RSS feeds.' : 'Aucun article publié dans les dernières 24h dans les flux RSS suivis.',
     comeBack: isEnglish ? 'Come back later for new updates!' : 'Revenez plus tard pour de nouvelles actualités !',
-    articlesCount: (count: number) => isEnglish
-      ? `${count} article${count > 1 ? 's' : ''} in the last 24 hours`
-      : `${count} article${count > 1 ? 's' : ''} publié${count > 1 ? 's' : ''} dans les dernières 24h`,
+    articlesCount: (count: number, updateTime: string) => isEnglish
+      ? `${count} article${count > 1 ? 's' : ''} in the last 24 hours (last update: ${updateTime})`
+      : `${count} article${count > 1 ? 's' : ''} publié${count > 1 ? 's' : ''} dans les dernières 24h (dernière mise à jour : ${updateTime})`,
   };
 
   useEffect(() => {
@@ -65,12 +65,30 @@ const RSSFeedWidget: React.FC = () => {
   const formatDate = (dateString: string) => {
     try {
       const date = new Date(dateString);
-      return date.toLocaleTimeString(isEnglish ? 'en-US' : 'fr-FR', {
-        hour: '2-digit',
-        minute: '2-digit'
-      });
+      const day = date.getDate().toString().padStart(2, '0');
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const year = date.getFullYear().toString().slice(-2);
+      const hours = date.getHours().toString().padStart(2, '0');
+      const minutes = date.getMinutes().toString().padStart(2, '0');
+
+      if (isEnglish) {
+        return `${month}/${day}/${year} ${hours}:${minutes}`;
+      } else {
+        return `${day}/${month}/${year} ${hours}:${minutes}`;
+      }
     } catch {
       return dateString;
+    }
+  };
+
+  const formatUpdateTime = (dateString: string) => {
+    try {
+      const date = new Date(dateString);
+      const hours = date.getHours().toString().padStart(2, '0');
+      const minutes = date.getMinutes().toString().padStart(2, '0');
+      return `${hours}:${minutes}`;
+    } catch {
+      return '';
     }
   };
 
@@ -119,7 +137,7 @@ const RSSFeedWidget: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.summary}>
-        <p>{t.articlesCount(getTotalArticles())}</p>
+        <p>{t.articlesCount(getTotalArticles(), formatUpdateTime(generatedAt))}</p>
       </div>
 
       {categoryGroups.map((group) => {
