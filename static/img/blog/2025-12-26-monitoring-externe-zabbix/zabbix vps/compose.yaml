@@ -1,0 +1,50 @@
+services:
+  zabbix-db:
+    image: postgres:16-alpine
+    container_name: zabbix-db
+    restart: always
+    volumes:
+      - ./zbx_db_data:/var/lib/postgresql/data
+    env_file: .env
+    networks:
+      - zabbix-tier
+
+  zabbix-server:
+    image: zabbix/zabbix-server-pgsql:7.0-alpine-latest
+    container_name: zabbix-server
+    restart: always
+    depends_on:
+      - zabbix-db
+    env_file: .env
+    ports:
+      - "10051:10051"
+    networks:
+      - zabbix-tier
+      - public-tier
+
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-pgsql:7.0-alpine-latest
+    container_name: zabbix-web
+    restart: always
+    depends_on:
+      - zabbix-db
+      - zabbix-server
+    env_file: .env
+    networks:
+      - zabbix-tier
+      - public-tier
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    restart: always
+    command: tunnel run
+    env_file: .env
+    networks:
+      - public-tier
+
+networks:
+  zabbix-tier:
+    internal: true
+  public-tier:
+    driver: bridge
