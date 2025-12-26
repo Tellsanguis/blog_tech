@@ -8,6 +8,10 @@ date: 2025-12-26
 
 Comment j'ai mis en place un système de monitoring externe avec Zabbix pour être alerté même si mon cluster Proxmox tombe complètement, en utilisant un proxy local, un serveur VPS distant et une connexion chiffrée PSK.
 
+<p align="center">
+  <img src="/img/blog/2025-12-26-monitoring-externe-zabbix/zabbix_logo.png" alt="Zabbix Logo" width="300" />
+</p>
+
 <!--truncate-->
 
 ## Le paradoxe du monitoring : surveiller ce qui vous surveille
