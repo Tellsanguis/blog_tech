@@ -90,7 +90,7 @@ Après avoir évalué plusieurs solutions (Prometheus + Grafana, Netdata, Influx
 
 Voici à quoi ressemble mon setup :
 
-![Architecture complète du monitoring Zabbix distribué](/img/blog/2025-12-26-monitoring-externe-zabbix/architecture-diagram.svg)
+![Architecture complète du monitoring Zabbix distribué](/img/blog/2025-12-26-monitoring-externe-zabbix/architecture-diagram.png)
 
 ### Le flux de données
 
