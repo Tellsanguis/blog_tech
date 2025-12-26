@@ -90,7 +90,7 @@ After evaluating several solutions (Prometheus + Grafana, Netdata, InfluxDB + Te
 
 Here's what my setup looks like:
 
-![Complete distributed Zabbix monitoring architecture](/img/blog/2025-12-26-monitoring-externe-zabbix/architecture-diagram.svg)
+![Complete distributed Zabbix monitoring architecture](/img/blog/2025-12-26-monitoring-externe-zabbix/architecture-diagram.png)
 
 ### Data flow
 
