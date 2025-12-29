@@ -38,7 +38,7 @@ const config: Config = {
 
   title: 'Tellserv Tech Blog',
   tagline: 'Sysadmin réseau et sécurité pratiquant l\'amélioration continue : du bare-metal à l\'IaC, vers une pratique DevOps/GitOps',
-  favicon: 'img/logo.png',
+  favicon: 'img/favicon.ico',
 
 
   url: 'https://docs.tellserv.fr',
