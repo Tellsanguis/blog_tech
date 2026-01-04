@@ -47,6 +47,7 @@ const sidebars: SidebarsConfig = {
         'homelab-actuel/playbooks-ansible',
         'homelab-actuel/docker-compose',
         'homelab-actuel/traefik',
+        'homelab-actuel/proxmox-backup-server',
       ],
     },
     {
