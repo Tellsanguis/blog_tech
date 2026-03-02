@@ -26,8 +26,6 @@ interface UnifiedTagsData {
 export default function TagsPage(): JSX.Element {
   const pluginData = usePluginData('docusaurus-plugin-unified-tags') as UnifiedTagsData;
 
-  console.log('Plugin data:', pluginData);
-
   if (!pluginData || !pluginData.tagsByLetter) {
     return (
       <Layout>

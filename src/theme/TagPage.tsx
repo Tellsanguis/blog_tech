@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import {usePluginData} from '@docusaurus/useGlobalData';
 import Layout from '@theme/Layout';
 import Translate, {translate} from '@docusaurus/Translate';
 import Heading from '@theme/Heading';
@@ -27,22 +26,12 @@ interface TagData {
   items: TagItem[];
 }
 
-interface TagsMapData {
-  [tagKey: string]: TagData;
-}
-
-interface UnifiedTagsData {
-  tagsMap: TagsMapData;
-}
-
 interface TagPageProps {
   tagKey: string;
+  tagData: TagData;
 }
 
-export default function TagPage(props: TagPageProps): JSX.Element {
-  const {tagsMap} = usePluginData('docusaurus-plugin-unified-tags') as UnifiedTagsData;
-  const tagData = tagsMap[props.tagKey];
-
+export default function TagPage({tagKey, tagData}: TagPageProps): JSX.Element {
   if (!tagData) {
     return (
       <Layout>

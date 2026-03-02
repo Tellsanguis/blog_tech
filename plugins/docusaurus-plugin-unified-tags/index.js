@@ -37,6 +37,7 @@ module.exports = function pluginUnifiedTags(context, options) {
                 title: post.metadata.title,
                 permalink: post.metadata.permalink,
                 date: post.metadata.date,
+                _ts: new Date(post.metadata.date).getTime(),
                 formattedDate: post.metadata.formattedDate,
                 description: post.metadata.description,
                 authors: post.metadata.authors,
@@ -77,9 +78,22 @@ module.exports = function pluginUnifiedTags(context, options) {
         });
       }
 
-      const allTags = Array.from(tagsMap.values()).sort((a, b) =>
-        a.label.localeCompare(b.label)
-      );
+      const sortedTagsData = new Map();
+      tagsMap.forEach((tagData, tagKey) => {
+        const sortedItems = tagData.items
+          .sort((a, b) => {
+            if (a.type === 'blog' && b.type === 'blog') return b._ts - a._ts;
+            if (a.type === 'doc' && b.type === 'doc') return a.title.localeCompare(b.title);
+            return a.type === 'blog' ? -1 : 1;
+          })
+          .map(({_ts, ...item}) => item);
+
+        sortedTagsData.set(tagKey, {...tagData, items: sortedItems});
+      });
+
+      const allTags = Array.from(tagsMap.values())
+        .map(({items, ...tag}) => tag)
+        .sort((a, b) => a.label.localeCompare(b.label));
 
       const tagsByLetter = {};
       allTags.forEach((tag) => {
@@ -90,40 +104,19 @@ module.exports = function pluginUnifiedTags(context, options) {
         tagsByLetter[firstLetter].push(tag);
       });
 
-      const globalData = {
-        allTags,
-        tagsByLetter,
-        tagsMap: Object.fromEntries(
-          Array.from(tagsMap.entries()).map(([key, value]) => [
-            key,
-            {
-              ...value,
-              items: value.items.sort((a, b) => {
-                if (a.type === 'blog' && b.type === 'blog') {
-                  return new Date(b.date) - new Date(a.date);
-                }
-                if (a.type === 'doc' && b.type === 'doc') {
-                  return a.title.localeCompare(b.title);
-                }
-                return a.type === 'blog' ? -1 : 1;
-              })
-            }
-          ])
-        )
-      };
-
-      setGlobalData(globalData);
+      setGlobalData({allTags, tagsByLetter});
 
       const locale = context.i18n.currentLocale;
       const baseUrl = locale === context.i18n.defaultLocale ? '/' : `/${locale}/`;
 
-      Array.from(tagsMap.entries()).forEach(([tagKey, tagData]) => {
+      sortedTagsData.forEach((tagData, tagKey) => {
         addRoute({
           path: `${baseUrl}tags/${tagKey}`,
           component: '@site/src/theme/TagPage',
           exact: true,
           props: {
-            tagKey: tagKey,
+            tagKey,
+            tagData,
           },
         });
       });

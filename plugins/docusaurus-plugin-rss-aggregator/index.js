@@ -5,6 +5,16 @@ const path = require('path');
 const https = require('https');
 const http = require('http');
 
+const PER_REQUEST_TIMEOUT_MS = 20_000;
+const GLOBAL_TIMEOUT_MS = 600_000;
+
+function withTimeout(promise, ms) {
+  const timeout = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error(`Timeout après ${ms / 1000}s`)), ms)
+  );
+  return Promise.race([promise, timeout]);
+}
+
 module.exports = function (context, options) {
   return {
     name: 'docusaurus-plugin-rss-aggregator',
@@ -12,14 +22,19 @@ module.exports = function (context, options) {
     async loadContent() {
       console.log('[RSS Aggregator] Récupération des flux RSS...');
 
+      const httpAgent = new http.Agent({ keepAlive: false });
+      const httpsAgent = new https.Agent({ keepAlive: false });
+
       const parser = new Parser({
-        timeout: 10000,
+        timeout: PER_REQUEST_TIMEOUT_MS,
+        requestOptions: {
+          agent: { http: httpAgent, https: httpsAgent }
+        },
         customFields: {
           item: ['description', 'content:encoded']
         }
       });
 
-      // Lecture du fichier OPML
       const opmlPath = path.join(context.siteDir, 'static', 'veille-tech.opml');
       const opmlText = fs.readFileSync(opmlPath, 'utf-8');
 
@@ -29,7 +44,6 @@ module.exports = function (context, options) {
       });
       const opmlData = xmlParser.parse(opmlText);
 
-      // Extraction des flux depuis le fichier OPML
       const opmlFeeds = [];
       const outlines = opmlData.opml.body.outline;
 
@@ -50,22 +64,26 @@ module.exports = function (context, options) {
         });
       });
 
-      // Récupération des flux RSS (articles des dernières 24h)
       const allItems = [];
       const now = Date.now();
       const twentyFourHoursAgo = now - (24 * 60 * 60 * 1000);
 
       console.log(`[RSS Aggregator] Récupération de ${opmlFeeds.length} flux RSS...`);
 
-      // Traitement par lots de 5 flux en parallèle pour ne pas surcharger
+      let globalTimedOut = false;
+      const globalTimeoutId = setTimeout(() => {
+        globalTimedOut = true;
+        console.warn('[RSS Aggregator] Timeout global atteint (600s), arrêt du traitement.');
+      }, GLOBAL_TIMEOUT_MS);
+
       const batchSize = 5;
       for (let i = 0; i < opmlFeeds.length; i += batchSize) {
+        if (globalTimedOut) break;
         const batch = opmlFeeds.slice(i, i + batchSize);
         const batchPromises = batch.map(async (feedInfo) => {
           try {
-            const feed = await parser.parseURL(feedInfo.xmlUrl);
+            const feed = await withTimeout(parser.parseURL(feedInfo.xmlUrl), PER_REQUEST_TIMEOUT_MS);
 
-            // Filtrer les articles des dernières 24h
             const recentItems = feed.items.filter((item) => {
               const itemDate = new Date(item.pubDate || item.isoDate || '');
               return itemDate.getTime() >= twentyFourHoursAgo;
@@ -88,7 +106,10 @@ module.exports = function (context, options) {
         allItems.push(...batchResults.flat());
       }
 
-      // Grouper par catégorie et trier
+      clearTimeout(globalTimeoutId);
+      httpAgent.destroy();
+      httpsAgent.destroy();
+
       const groupedByCategory = new Map();
 
       allItems.forEach((item) => {
@@ -98,7 +119,6 @@ module.exports = function (context, options) {
         groupedByCategory.get(item.category).push(item);
       });
 
-      // Trier les articles de chaque catégorie par date (plus récent en premier)
       const groups = Array.from(groupedByCategory.entries())
         .map(([category, items]) => ({
           category,
@@ -120,13 +140,9 @@ module.exports = function (context, options) {
     async contentLoaded({ content, actions }) {
       const { setGlobalData } = actions;
 
-      // Écrire les données dans un fichier JSON statique
       const outputPath = path.join(context.siteDir, 'static', 'rss-feed-cache.json');
       fs.writeFileSync(outputPath, JSON.stringify(content, null, 2));
-
       console.log(`[RSS Aggregator] Données écrites dans ${outputPath}`);
-
-      // Rendre les données disponibles globalement
       setGlobalData(content);
     },
   };
