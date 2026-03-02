@@ -11,16 +11,22 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'cancelled' }}
     permissions:
       actions: write
+      contents: read
 
     steps:
-      - name: Relancer le workflow si moins de 3 essais
+      - name: Relancer le workflow (Retry)
         if: ${{ github.event.workflow_run.run_attempt < 3 }}
-        run: |
-          echo "Le workflow précédent a échoué ou a duré trop longtemps. Relance automatique..."
-          gh workflow run "${{ github.event.workflow_run.workflow_id }}" --ref "${{ github.event.workflow_run.head_branch }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Previous run failed. Attempting rerun #${{ github.event.workflow_run.run_attempt }}..."
           
-      - name: Ne pas relancer (Trop d'essais)
+          # Use 'run rerun' to increment the attempt counter properly
+          # Add --repo to fix the "not a git repository" error
+          gh run rerun ${{ github.event.workflow_run.id }} \
+            --repo ${{ github.repository }} \
+            --failed
+            
+      - name: Stop Retrying
         if: ${{ github.event.workflow_run.run_attempt >= 3 }}
-        run: echo "Déjà 3 tentatives échouées. On arrête pour éviter une boucle infinie."
+        run: echo "Max attempts reached (3). Stopping to prevent loop."
