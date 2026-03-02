@@ -2,8 +2,6 @@ const Parser = require('rss-parser');
 const { XMLParser } = require('fast-xml-parser');
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
-const http = require('http');
 
 const PER_REQUEST_TIMEOUT_MS = 20_000;
 const GLOBAL_TIMEOUT_MS = 600_000;
@@ -22,13 +20,10 @@ module.exports = function (context, options) {
     async loadContent() {
       console.log('[RSS Aggregator] Récupération des flux RSS...');
 
-      const httpAgent = new http.Agent({ keepAlive: false });
-      const httpsAgent = new https.Agent({ keepAlive: false });
-
       const parser = new Parser({
         timeout: PER_REQUEST_TIMEOUT_MS,
         requestOptions: {
-          agent: { http: httpAgent, https: httpsAgent }
+          agent: false
         },
         customFields: {
           item: ['description', 'content:encoded']
@@ -107,8 +102,6 @@ module.exports = function (context, options) {
       }
 
       clearTimeout(globalTimeoutId);
-      httpAgent.destroy();
-      httpsAgent.destroy();
 
       const groupedByCategory = new Map();
 
