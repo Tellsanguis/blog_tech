@@ -6,6 +6,11 @@ const path = require('path');
 const PER_REQUEST_TIMEOUT_MS = 20_000;
 const GLOBAL_TIMEOUT_MS = 600_000;
 
+// `docusaurus build` runs a full build per locale in the same process.
+// The aggregated content doesn't depend on the locale, so cache it in
+// module scope to avoid re-fetching all feeds for every locale build.
+let cachedContent = null;
+
 function withTimeout(promise, ms) {
   const timeout = new Promise((_, reject) =>
     setTimeout(() => reject(new Error(`Timeout après ${ms / 1000}s`)), ms)
@@ -18,6 +23,11 @@ module.exports = function (context, options) {
     name: 'docusaurus-plugin-rss-aggregator',
 
     async loadContent() {
+      if (cachedContent) {
+        console.log('[RSS Aggregator] Réutilisation du cache en mémoire (déjà récupéré pour une autre locale)');
+        return cachedContent;
+      }
+
       console.log('[RSS Aggregator] Récupération des flux RSS...');
 
       const parser = new Parser({
@@ -123,11 +133,12 @@ module.exports = function (context, options) {
 
       console.log(`[RSS Aggregator] ${allItems.length} articles trouvés dans les dernières 24h`);
 
-      return {
+      cachedContent = {
         groups,
         generatedAt: new Date().toISOString(),
         totalArticles: allItems.length
       };
+      return cachedContent;
     },
 
     async contentLoaded({ content, actions }) {
