@@ -81,7 +81,7 @@ module.exports = function (context, options) {
         console.warn('[RSS Aggregator] Timeout global atteint (600s), arrêt du traitement.');
       }, GLOBAL_TIMEOUT_MS);
 
-      const batchSize = 5;
+      const batchSize = 10;
       for (let i = 0; i < opmlFeeds.length; i += batchSize) {
         if (globalTimedOut) break;
         const batch = opmlFeeds.slice(i, i + batchSize);

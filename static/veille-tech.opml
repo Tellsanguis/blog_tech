@@ -19,7 +19,9 @@
       <outline type="rss" text="Netflix Technology Blog" title="Netflix Technology Blog" xmlUrl="http://techblog.netflix.com/feeds/posts/default?alt=rss" />
       <outline type="rss" text="GitLab Blog" title="GitLab Blog" xmlUrl="https://about.gitlab.com/atom.xml" />
       <outline type="rss" text="DevOps.com" title="DevOps.com" xmlUrl="https://devops.com/feed/" />
+      <!-- Désactivé : flux Atom malformé côté source, échoue systématiquement au parsing
       <outline type="rss" text="The Register - DevOps" title="The Register - DevOps" xmlUrl="https://www.theregister.com/devops/headlines.atom" />
+      -->
     </outline>
     <outline text="Kubernetes / Cloud / Conteneurs" title="Kubernetes / Cloud / Conteneurs">
       <outline type="rss" text="Kubernetes Blog" title="Kubernetes Blog" xmlUrl="https://kubernetes.io/feed.xml" />
@@ -29,13 +31,17 @@
       <outline type="rss" text="Docker Blog" title="Docker Blog" xmlUrl="https://www.docker.com/blog/feed/" />
       <outline type="rss" text="Red Hat Blog" title="Red Hat Blog" xmlUrl="https://www.redhat.com/en/rss/blog" />
       <outline type="rss" text="HashiCorp Blog" title="HashiCorp Blog" xmlUrl="https://www.hashicorp.com/blog/feed.xml" />
+      <!-- Désactivé : URL en 404
       <outline type="rss" text="OVHcloud Blog (FR)" title="OVHcloud Blog (FR)" xmlUrl="https://blog.ovhcloud.com/category/ovhcloud-en-francais/feed/" />
+      -->
     </outline>
     <outline text="Sécurité / Vulnérabilités / Cyber" title="Sécurité / Vulnérabilités / Cyber">
       <outline type="rss" text="The Hacker News" title="The Hacker News" xmlUrl="http://www.thehackernews.com/feeds/posts/default" />
       <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" />
       <outline type="rss" text="Schneier on Security" title="Schneier on Security" xmlUrl="https://www.schneier.com/feed/" />
-      <outline type="rss"text="Naked Security by Sophos" title="Naked Security by Sophos" xmlUrl="https://nakedsecurity.sophos.com/feed/" />
+      <!-- Désactivé : timeout systématique (>20s), le site a été fermé par Sophos
+      <outline type="rss" text="Naked Security by Sophos" title="Naked Security by Sophos" xmlUrl="https://nakedsecurity.sophos.com/feed/" />
+      -->
       <outline type="rss" text="Dark Reading" title="Dark Reading" xmlUrl="https://www.darkreading.com/rss.xml" />
       <outline type="rss" text="CERT-FR (ANSSI)" title="CERT-FR (ANSSI)" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" />
     </outline>
