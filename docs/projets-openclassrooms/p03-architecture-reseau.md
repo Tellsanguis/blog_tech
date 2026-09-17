@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-tags: [reseau, vlan, firewall, architecture, subnetting]
+tags: [réseau, vlan, firewall, architecture, subnetting]
 last_update:
   date: 2025-11-22
 ---

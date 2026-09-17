@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Backhaul WiFi Mesh avec 802.11s
-tags: [openwrt, wifi, mesh, reseau]
+tags: [openwrt, wifi, mesh, réseau]
 last_update:
   date: 2025-12-03
 ---

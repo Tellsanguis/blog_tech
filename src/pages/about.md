@@ -1,8 +1,21 @@
 # Présentation
 
-Administrateur systèmes et réseaux spécialisé en **automatisation cross-platform** (Ansible/PowerShell/Bash), **virtualisation & conteneurisation** (Proxmox/Docker) et **Active Directory**. Certifié RNCP niveau 6 par OpenClassrooms, compétences acquises via 12 projets techniques couvrant réseaux d'entreprise, supervision, sauvegardes/PRA et sécurité offensive. Homelab en production pour R&D continue.
+Administrateur systèmes et réseaux spécialisé en **automatisation cross-platform** (Ansible/PowerShell/Bash), **virtualisation & conteneurisation** (Proxmox/Docker) et **Active Directory**. Certifié RNCP niveau 6 par OpenClassrooms, avec une première expérience en **PME industrielle** : audit de sécurité, segmentation réseau et déploiement d'une infrastructure **GitOps**. Homelab en production pour R&D continue.
 
 ---
+
+## Expérience actuelle : Administrateur Systèmes et Réseaux
+
+Depuis avril 2026, j'interviens sur le système d'information d'une PME industrielle (Imprimerie Corlet, Condé-en-Normandie), au sein d'une équipe informatique de 6 personnes :
+
+- **Audit de sécurité** et cartographie complète du SI, avec priorisation des risques adaptée aux contraintes d'une production en continu.
+- **Sécurisation immédiate sans arrêt de production** : durcissement Active Directory (désactivation NTLMv1, Protected Users), isolation du Wi-Fi, mises à jour logicielles.
+- **Administration M365** : Exchange Online et Entra ID, SSO centralisé de tous les services internes.
+- **Conception d'une architecture cible** : segmentation VLAN, PKI interne, DNS haute disponibilité, forge Git, gestion centralisée des secrets, prise en main à distance sécurisée.
+- **Plateforme GitOps** d'une dizaine de services (conteneurs rootless, déploiement Ansible en pull déclenché par tags signés) : la documentation devient une étape obligatoire avant toute mise en production. Patch management automatisé des VMs : snapshots, mises à jour, rollback, healthchecks.
+- **Bastion validé en lab** : certificats SSH éphémères adossés à Entra ID, enregistrement des sessions, accès distant restreint.
+
+Certains points de mon expérience ont été documentés dans les [articles récents du blog](/blog).
 
 ## Les débuts
 
@@ -25,8 +38,6 @@ Par la suite, j'ai approfondi mes connaissances :
 - Passage aux fichiers **Docker Compose**
 - Notions réseau : subnets, VLANs, ACLs
 - Transition du bare metal vers la **virtualisation**
-
-Cela m'a permis d'aboutir à mon architecture actuelle : un serveur Ubuntu déployé sous **Proxmox**, automatisé via **Ansible** et des fichiers Docker Compose.
 
 ## La reconversion professionnelle
 
@@ -57,15 +68,13 @@ J'ai obtenu ma certification par anticipation le **6 novembre 2025**, après moi
 
 Le détail de chaque projet est disponible dans la section [Projets OpenClassrooms](/docs/projets-openclassrooms).
 
-## Vers l'Infrastructure as Code et le DevOps
+## Le homelab aujourd'hui
 
-L'aspect **Infrastructure as Code** m'a immédiatement plu et m'a amené à m'intéresser à :
-- La philosophie **DevOps**
-- **Terraform** et sa contrepartie open source **OpenTofu**
-- **Git** et les pipelines **CI/CD**
-- **Kubernetes**
-- Le stockage distribué et la haute disponibilité
+Le homelab reste mon terrain de R&D continue, en parallèle du travail :
 
-Mon objectif actuel : un **cluster Proxmox** à trois machines (deux machines de prod et une witness pour le quorum), après avoir envisagé d'utiliser tous ces outils sur une seule machine pour des raisons de coût.
+- Cluster **Proxmox HA** à 3 nœuds, 40+ services conteneurisés via Docker Compose. Haute disponibilité éprouvée en panne réelle : bascule automatique en moins d'une minute, zéro interruption.
+- Déploiement **100 % automatisé** via **Ansible**, playbooks publics sur [forgejo.tellserv.fr](https://forgejo.tellserv.fr/Tellsanguis/Homelab).
+- Réseau **OPNsense** segmenté VLAN/VXLAN, principes **zero trust**, reverse proxy Traefik (TLS automatique).
+- Stockage HA **Linstor DRBD** + **ZFS** répliqué, supervision offsite Zabbix.
 
-Cette architecture est actuellement en cours de réalisation sur mon [dépôt Homelab](https://forgejo.tellserv.fr/Tellsanguis/Homelab). L'ancienne architecture reste déployée en parallèle pour assurer une migration en douceur.
+En cours d'apprentissage : **Kubernetes** (K3s/Talos) et **OpenTofu**, sur un futur cluster Proxmox à trois machines (deux machines de prod et une witness pour le quorum). L'ancienne architecture reste déployée en parallèle pour assurer une migration en douceur.

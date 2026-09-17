@@ -1,8 +1,21 @@
 # About
 
-Systems and network administrator specialized in **cross-platform automation** (Ansible/PowerShell/Bash), **virtualization & containerization** (Proxmox/Docker), and **Active Directory**. RNCP Level 6 certified by OpenClassrooms, skills acquired through 12 technical projects covering enterprise networks, monitoring, backups/DRP, and offensive security. Production homelab for continuous R&D.
+Systems and network administrator specialized in **cross-platform automation** (Ansible/PowerShell/Bash), **virtualization & containerization** (Proxmox/Docker), and **Active Directory**. RNCP Level 6 certified by OpenClassrooms, with a first professional experience in an **industrial SME**: security audit, network segmentation, and deployment of a **GitOps** infrastructure. Production homelab for continuous R&D.
 
 ---
+
+## Current Role: Systems and Network Administrator
+
+Since April 2026, I've been working on the information system of an industrial SME (Imprimerie Corlet, Condé-en-Normandie), within a 6-person IT team:
+
+- **Security audit** and complete IS mapping, with risk prioritization adapted to the constraints of continuous production.
+- **Immediate hardening without production downtime**: Active Directory hardening (disabling NTLMv1, Protected Users), Wi-Fi isolation, software updates.
+- **M365 administration**: Exchange Online and Entra ID, centralized SSO across all internal services.
+- **Target architecture design**: VLAN segmentation, internal PKI, high-availability DNS, Git forge, centralized secrets management, secure remote access.
+- **GitOps platform** of about ten services (rootless containers, pull-based Ansible deployment triggered by signed tags): documentation becomes a mandatory step before any production rollout. Automated VM patch management: snapshots, updates, rollback, healthchecks.
+- **Lab-validated bastion**: ephemeral SSH certificates backed by Entra ID, session recording, restricted remote access.
+
+Some aspects of this experience are documented in the [recent blog posts](/blog).
 
 ## The Beginnings
 
@@ -25,8 +38,6 @@ Later, I deepened my knowledge:
 - Transition to **Docker Compose** files
 - Network concepts: subnets, VLANs, ACLs
 - Transition from bare metal to **virtualization**
-
-This led me to my current architecture: an Ubuntu server deployed on **Proxmox**, automated via **Ansible** and Docker Compose files.
 
 ## Professional Reconversion
 
@@ -57,15 +68,13 @@ I obtained my certification ahead of schedule on **November 6, 2025**, after les
 
 Details of each project are available in the [OpenClassrooms Projects](/docs/projets-openclassrooms) section.
 
-## Towards Infrastructure as Code and DevOps
+## The Homelab Today
 
-The **Infrastructure as Code** aspect immediately appealed to me and led me to explore:
-- The **DevOps** philosophy
-- **Terraform** and its open-source counterpart **OpenTofu**
-- **Git** and **CI/CD** pipelines
-- **Kubernetes**
-- Distributed storage and high availability
+The homelab remains my continuous R&D playground, alongside work:
 
-My current goal: a **Proxmox cluster** with three machines (two production machines and a witness for quorum), after considering using all these tools on a single machine for cost reasons.
+- **Proxmox HA** cluster with 3 nodes, 40+ containerized services via Docker Compose. High availability proven in a real outage: automatic failover in under a minute, zero interruption.
+- **100% automated** deployment via **Ansible**, public playbooks on [forgejo.tellserv.fr](https://forgejo.tellserv.fr/Tellsanguis/Homelab).
+- **OPNsense** network segmented VLAN/VXLAN, **zero trust** principles, Traefik reverse proxy (automatic TLS).
+- HA storage with **Linstor DRBD** + replicated **ZFS**, offsite Zabbix monitoring.
 
-This architecture is currently being implemented on my [Homelab repository](https://forgejo.tellserv.fr/Tellsanguis/Homelab). The old architecture remains deployed in parallel to ensure a smooth migration.
+Currently learning: **Kubernetes** (K3s/Talos) and **OpenTofu**, targeting a future three-machine Proxmox cluster (two production machines and a witness for quorum). The old architecture remains deployed in parallel to ensure a smooth migration.

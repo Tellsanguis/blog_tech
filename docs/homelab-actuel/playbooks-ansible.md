@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-tags: [ansible, automatisation, iac, homelab]
+tags: [ansible, automatisation, infrastructure-as-code, homelab]
 last_update:
   date: 2025-12-03
 ---

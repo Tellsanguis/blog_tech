@@ -4,40 +4,6 @@ const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     {
       type: 'category',
-      label: 'Projets OpenClassrooms',
-      link: {
-        type: 'doc',
-        id: 'projets-openclassrooms/index',
-      },
-      items: [
-        'projets-openclassrooms/p02-gestion-itsm',
-        'projets-openclassrooms/p03-architecture-reseau',
-        'projets-openclassrooms/p04-architecture-ntiers',
-        'projets-openclassrooms/p05-securisation-web',
-        'projets-openclassrooms/p06-site-distant',
-        'projets-openclassrooms/p07-reseau-cisco',
-        'projets-openclassrooms/p08-supervision-nagios',
-        'projets-openclassrooms/p09-gestion-parc-ansible',
-        'projets-openclassrooms/p10-sauvegardes-rsync',
-        'projets-openclassrooms/p11-conformite-anssi',
-        'projets-openclassrooms/p12-audit-securite-ad',
-        'projets-openclassrooms/p13-migration-cloud-aws',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'OpenWRT',
-      link: {
-        type: 'doc',
-        id: 'openwrt/index',
-      },
-      items: [
-        'openwrt/backhaul-wifi-mesh',
-        'openwrt/gretap-vlan',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Homelab actuel - Docker Compose & Ansible',
       link: {
         type: 'doc',
@@ -63,6 +29,40 @@ const sidebars: SidebarsConfig = {
       ],
     },
     'zfs-replication-nfs',
+    {
+      type: 'category',
+      label: 'OpenWRT',
+      link: {
+        type: 'doc',
+        id: 'openwrt/index',
+      },
+      items: [
+        'openwrt/backhaul-wifi-mesh',
+        'openwrt/gretap-vlan',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Projets OpenClassrooms',
+      link: {
+        type: 'doc',
+        id: 'projets-openclassrooms/index',
+      },
+      items: [
+        'projets-openclassrooms/p02-gestion-itsm',
+        'projets-openclassrooms/p03-architecture-reseau',
+        'projets-openclassrooms/p04-architecture-ntiers',
+        'projets-openclassrooms/p05-securisation-web',
+        'projets-openclassrooms/p06-site-distant',
+        'projets-openclassrooms/p07-reseau-cisco',
+        'projets-openclassrooms/p08-supervision-nagios',
+        'projets-openclassrooms/p09-gestion-parc-ansible',
+        'projets-openclassrooms/p10-sauvegardes-rsync',
+        'projets-openclassrooms/p11-conformite-anssi',
+        'projets-openclassrooms/p12-audit-securite-ad',
+        'projets-openclassrooms/p13-migration-cloud-aws',
+      ],
+    },
   ],
 };
 

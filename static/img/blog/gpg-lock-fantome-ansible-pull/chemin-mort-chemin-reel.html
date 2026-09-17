@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le chemin mort dans le pipeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --color-paper:  #faf7f2;
+    --color-ink:    #1c1917;
+    --color-muted:  #4f5d75;
+    --color-accent: #2e8555;
+    --font-sans:  'Geist', system-ui, sans-serif;
+    --font-serif: 'Instrument Serif', serif;
+    --font-mono:  'Geist Mono', ui-monospace, monospace;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+  .frame { max-width: 1200px; width: 100%; }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--color-ink);
+    margin-bottom: 1.5rem;
+  }
+  svg { width: 100%; min-width: 900px; display: block; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Architecture · Code mort</p>
+    <h1>Un chemin mort et un chemin réel, dans le même pipeline</h1>
+
+    <svg viewBox="0 0 1080 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="deadpath-title deadpath-desc">
+      <title id="deadpath-title">Le chemin mort et le chemin réel du pipeline ansible-pull</title>
+      <desc id="deadpath-desc">Depuis le rôle partagé, une branche importe une clé GPG qui ne sert jamais à rien et finit en verrou orphelin, tandis que la branche réelle vérifie une signature SSH et exécute le playbook.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e8555"/></marker>
+        <marker id="arrow-soft" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#7a8399"/></marker>
+      </defs>
+
+      <rect width="100%" height="100%" fill="#faf7f2"/>
+
+      <!-- Dead branch (top): 1 -> 2 -> 3, dashed -->
+      <path d="M 200,252 H 232 Q 240,252 240,244 V 140 Q 240,132 248,132 H 280"
+            fill="none" stroke="#7a8399" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-soft)"/>
+      <line x1="460" y1="132" x2="540" y2="132" stroke="#7a8399" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-soft)"/>
+
+      <!-- Real branch (bottom): 1 -> 4 -> 5, solid -->
+      <path d="M 200,252 H 232 Q 240,252 240,260 V 364 Q 240,372 248,372 H 280"
+            fill="none" stroke="#2e8555" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+      <line x1="460" y1="372" x2="540" y2="372" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- Labels -->
+      <rect x="216" y="180" width="36" height="12" rx="2" fill="#faf7f2"/>
+      <text x="220" y="189" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.06em">MORT</text>
+
+      <rect x="480" y="112" width="60" height="12" rx="2" fill="#faf7f2"/>
+      <text x="500" y="122" fill="#7a8399" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">JAMAIS LU</text>
+
+      <rect x="216" y="300" width="34" height="12" rx="2" fill="#faf7f2"/>
+      <text x="220" y="309" fill="#2e8555" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.06em">RÉEL</text>
+
+      <rect x="486" y="352" width="28" height="12" rx="2" fill="#faf7f2"/>
+      <text x="500" y="361" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">OK</text>
+
+      <!-- Node 1: Rôle partagé (input) -->
+      <rect x="40" y="220" width="160" height="64" rx="6" fill="#faf7f2"/>
+      <rect x="40" y="220" width="160" height="64" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+      <rect x="48" y="228" width="28" height="12" rx="2" fill="transparent" stroke="rgba(122,131,153,0.40)" stroke-width="0.8"/>
+      <text x="62" y="237" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SRC</text>
+      <text x="120" y="256" fill="#1c1917" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Rôle partagé</text>
+      <text x="120" y="272" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ansible_pull</text>
+
+      <!-- Node 2: Import clé GPG (dead/optional) -->
+      <rect x="280" y="100" width="180" height="64" rx="6" fill="#faf7f2"/>
+      <rect x="280" y="100" width="180" height="64" rx="6" fill="rgba(28,25,23,0.02)" stroke="rgba(28,25,23,0.20)" stroke-width="1" stroke-dasharray="4,3"/>
+      <rect x="288" y="108" width="28" height="12" rx="2" fill="transparent" stroke="rgba(28,25,23,0.20)" stroke-width="0.8"/>
+      <text x="302" y="117" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">GPG</text>
+      <text x="370" y="136" fill="#1c1917" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Import clé GPG</text>
+      <text x="370" y="152" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">toutes les 30 min</text>
+
+      <!-- Node 3: Verrou orphelin (dead end) -->
+      <rect x="540" y="100" width="180" height="64" rx="6" fill="#faf7f2"/>
+      <rect x="540" y="100" width="180" height="64" rx="6" fill="rgba(28,25,23,0.02)" stroke="rgba(28,25,23,0.20)" stroke-width="1" stroke-dasharray="4,3"/>
+      <rect x="548" y="108" width="30" height="12" rx="2" fill="transparent" stroke="rgba(28,25,23,0.20)" stroke-width="0.8"/>
+      <text x="563" y="117" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">LOCK</text>
+      <text x="630" y="136" fill="#1c1917" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Verrou orphelin</text>
+      <text x="630" y="152" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">bloque le run suivant</text>
+
+      <!-- Node 4: git verify-tag (focal, real) -->
+      <rect x="280" y="340" width="180" height="64" rx="6" fill="#faf7f2"/>
+      <rect x="280" y="340" width="180" height="64" rx="6" fill="rgba(46,133,85,0.12)" stroke="#2e8555" stroke-width="1"/>
+      <rect x="288" y="348" width="28" height="12" rx="2" fill="transparent" stroke="rgba(46,133,85,0.50)" stroke-width="0.8"/>
+      <text x="302" y="357" fill="#2e8555" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SSH</text>
+      <text x="370" y="376" fill="#1c1917" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">git verify-tag</text>
+      <text x="370" y="392" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">allowed_signers</text>
+
+      <!-- Node 5: Exécution (backend) -->
+      <rect x="540" y="340" width="180" height="64" rx="6" fill="#faf7f2"/>
+      <rect x="540" y="340" width="180" height="64" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1"/>
+      <rect x="548" y="348" width="28" height="12" rx="2" fill="transparent" stroke="rgba(28,25,23,0.40)" stroke-width="0.8"/>
+      <text x="562" y="357" fill="#1c1917" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">RUN</text>
+      <text x="630" y="376" fill="#1c1917" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Exécution</text>
+      <text x="630" y="392" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">ansible-playbook</text>
+
+      <!-- Legend strip -->
+      <line x1="40" y1="424" x2="1040" y2="424" stroke="rgba(28,25,23,0.10)" stroke-width="0.8"/>
+      <text x="40" y="440" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEGEND</text>
+    </svg>
+  </div>
+</body>
+</html>
